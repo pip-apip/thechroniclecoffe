@@ -1,0 +1,51 @@
+<div class="d-flex flex-column gap-1 justify-content-center mt-5">
+  {{#each this}}
+    <div style="width: 21rem; height: 27rem">
+      <img
+        src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+        class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+        alt="{{title}}"
+        style="border-radius: 0.5rem;"
+      />
+      <div class="p-2 d-flex justify-content-between align-items-center">
+        <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+        <div class="d-flex flex-column justify-self-center align-self-center">
+          <span
+            class="fw-semibold"
+            style="color: #D78325; font-size:1.2rem"
+          >$3.20<br /></span>
+          <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous" id="prev-page">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a
+        class="page-link"
+        href="#"
+        data-index="0"
+      >1</a></li>
+    <li class="page-item"><a
+        class="page-link"
+        href="#"
+        data-index="1"
+      >2</a></li>
+    <li class="page-item"><a
+        class="page-link"
+        href="#"
+        data-index="2"
+      >3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next" id="next-page">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>

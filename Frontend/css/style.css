@@ -1,0 +1,62 @@
+.logo {
+  width: auto;
+  height: 4rem;
+}
+
+.btn-custom-sign-in {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.66rem;
+}
+
+.img-home {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.navbar-ch {
+  background-color: #394034;
+}
+
+.navbar-ch_dark {
+  background-color: #22261f;
+}
+
+.reenie-beanie-regular {
+  font-family: "Reenie Beanie", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.coffee-catalogue:hover {
+  background-color: #22261f;
+  color: white;
+}
+
+.coffee-catalogue {
+  color: #22261f;
+}
+
+.landing-page-lg {
+  display: none; /* Hide by default */
+}
+
+@media (min-width: 768px) {
+  .landing-page-lg {
+    display: block; /* Show on larger screens */
+  }
+}
+
+.landing-page-sm {
+  display: none; /* Hide by default */
+}
+
+@media (max-width: 767px) {
+  .landing-page-sm {
+    display: block; /* Show on larger screens */
+  }
+}
