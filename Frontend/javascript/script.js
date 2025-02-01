@@ -6,7 +6,7 @@ function loadTemplate(url) {
 Promise.all([
   fetch("https://jsonplaceholder.typicode.com/photos?_limit=25") // Limit to 25 items
     .then((res) => res.json()),
-  loadTemplate("../template/catalogue-data.hbs"), // Load the Handlebars template
+  loadTemplate("./javascript/template/catalogue-data.hbs"), // Load the Handlebars template
 ])
   .then(([data, templateSource]) => {
     // Specify the index you want to display
@@ -34,7 +34,7 @@ Promise.all([
 Promise.all([
   fetch("https://jsonplaceholder.typicode.com/photos?_limit=25") // Limit to 25 items
     .then((res) => res.json()),
-  loadTemplate("../template/recommendation-list.hbs"), // Load the Handlebars template
+  loadTemplate("./javascript/template/recommendation-list.hbs"), // Load the Handlebars template
 ])
   .then(([data, templateSource]) => {
     // Specify the index you want to display
@@ -63,7 +63,7 @@ Promise.all([
 Promise.all([
   fetch("https://jsonplaceholder.typicode.com/photos?_limit=25") // Limit to 25 items
     .then((res) => res.json()),
-  loadTemplate("../template/blog.hbs"), // Load the Handlebars template
+  loadTemplate("./javascript/template/blog.hbs"), // Load the Handlebars template
 ])
   .then(([data, templateSource]) => {
     const specificIndex = 2; // Change this to the desired index
@@ -96,12 +96,12 @@ async function renderTemplates() {
       articlesTemplateSource,
       footerTemplateSource,
     ] = await Promise.all([
-      loadTemplate("../template/navbar.hbs"),
-      loadTemplate("../template/landing-page.hbs"),
-      loadTemplate("../template/catalogue.hbs"),
-      loadTemplate("../template/top-product.hbs"),
-      loadTemplate("../template/articles.hbs"),
-      loadTemplate("../template/footer.hbs"),
+      loadTemplate("./javascript/template/navbar.hbs"),
+      loadTemplate("./javascript/template/landing-page.hbs"),
+      loadTemplate("./javascript/template/catalogue.hbs"),
+      loadTemplate("./javascript/template/top-product.hbs"),
+      loadTemplate("./javascript/template/articles.hbs"),
+      loadTemplate("./javascript/template/footer.hbs"),
     ]);
 
     // Compile the Handlebars templates
