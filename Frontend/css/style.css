@@ -32,6 +32,30 @@
   font-style: normal;
 }
 
+.lato {
+  font-family: "Lato", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", serif;
+  font-weight: 200;
+  font-style: light;
+}
+
 .coffee-catalogue:hover {
   background-color: #22261f;
   color: white;
@@ -41,22 +65,32 @@
   color: #22261f;
 }
 
-.landing-page-lg {
+.content-lg {
   display: none; /* Hide by default */
 }
 
 @media (min-width: 768px) {
-  .landing-page-lg {
+  .content-lg {
     display: block; /* Show on larger screens */
   }
 }
 
-.landing-page-sm {
+.content-sm {
   display: none; /* Hide by default */
 }
 
 @media (max-width: 767px) {
-  .landing-page-sm {
+  .content-sm {
+    display: block; /* Show on larger screens */
+  }
+}
+
+.content-md {
+  display: none; /* Hide by default */
+}
+
+@media (min-width: 1333px) {
+  .content-md {
     display: block; /* Show on larger screens */
   }
 }
