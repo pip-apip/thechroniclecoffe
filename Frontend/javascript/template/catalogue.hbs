@@ -37,65 +37,379 @@
       >Cappucino/Latte</button>
     </div>
 
-    <div id="content-catalogue">
+    <div id="catalogue-content">
+      <section class="content-sm">
+        <div class="d-flex flex-column gap-1 justify-content-center mt-5">
+          {{#each this}}
+            <div style="width: 21rem; height: 27rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a
+                class="page-link"
+                href="#"
+                aria-label="Previous"
+                id="prev-page"
+              >
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a
+                class="page-link"
+                href="#"
+                data-index="0"
+              >1</a></li>
+            <li class="page-item"><a
+                class="page-link"
+                href="#"
+                data-index="1"
+              >2</a></li>
+            <li class="page-item"><a
+                class="page-link"
+                href="#"
+                data-index="2"
+              >3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next" id="next-page">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      {{! Content MD }}
+
+      <section class="content-lg">
+        <div class="d-flex flex-column gap-1 justify-content-center mt-5">
+          {{#each this}}
+            <div style="width: 21rem; height: 27rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a
+                class="page-link"
+                href="#"
+                aria-label="Previous"
+                id="prev-page"
+              >
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a
+                class="page-link"
+                href="#"
+                data-index="0"
+              >1</a></li>
+            <li class="page-item"><a
+                class="page-link"
+                href="#"
+                data-index="1"
+              >2</a></li>
+            <li class="page-item"><a
+                class="page-link"
+                href="#"
+                data-index="2"
+              >3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next" id="next-page">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
     </div>
   </div>
 </section>
 
 {{! Large content }}
-
-<section
-  id="catalogue"
-  class="content-lg pt-5"
-  style="background-color: #E5DCD3"
->
-  <div
-    class="container p-5 d-flex flex-column align-items-center justify-content-center"
+<div id="catalogue content-lg">
+  <section
+    class="px-5 py-3 rounded-lg container my-5"
+    style="background-color: #efe7e0"
   >
-    <div class="d-flex justify-content-between">
-      <div
-        class="d-flex flex-column justify-content-center align-items-start gap-1"
-      >
-        <h1
-          class="p-hero fw-semibold text-start mt-4"
-          style="font-size: 4rem; color: #2E2C2A"
-        >COFFEE MENU</h1>
-        <p
-          class="text-start fw-semibold reenie-beanie-regular"
-          style="font-size: 1.33rem; color: #2E2C2A;"
-        >From warm and smooth to cold and refreshing. There are endless drink
-          option to find and love at Coffee House..</p>
+    <div
+      class="d-flex flex-column align-items-center justify-content-center w-100"
+    >
+      <div class="d-flex justify-content-between align-items-center">
+        <div
+          class="d-flex flex-column justify-content-center align-items-start gap-1"
+        >
+          <h1
+            class="p-hero fw-semibold text-start mt-4"
+            style="font-size: 4rem; color: #2E2C2A"
+          >COFFEE MENU</h1>
+          <p
+            class="text-start fw-semibold reenie-beanie-regular"
+            style="font-size: 1.33rem; color: #2E2C2A;"
+          >From warm and smooth to cold and refreshing. There are endless drink
+            option to find and love at Coffee House..</p>
+        </div>
+        <div class="d-flex flex-wrap gap-2 justify-content-end px-5 h-100">
+          <button
+            type="button"
+            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
+          >Cold Coffee</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
+          >Craft Drinks</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
+          >With Coconut Milk</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
+          >Espresso Based</button>
+          <button
+            type="button"
+            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
+          >Cappucino/Latte</button>
+        </div>
       </div>
-      <div class="d-flex flex-wrap gap-2 justify-content-center px-5">
-        <button
-          type="button"
-          class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-          style="border-radius: 2rem; border-color:#2E2C2A;"
-        >Cold Coffee</button>
-        <button
-          type="button"
-          class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-          style="border-radius: 2rem; border-color:#2E2C2A;"
-        >Craft Drinks</button>
-        <button
-          type="button"
-          class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-          style="border-radius: 2rem; border-color:#2E2C2A;"
-        >With Coconut Milk</button>
-        <button
-          type="button"
-          class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-          style="border-radius: 2rem; border-color:#2E2C2A;"
-        >Espresso Based</button>
-        <button
-          type="button"
-          class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-          style="border-radius: 2rem; border-color:#2E2C2A;"
-        >Cappucino/Latte</button>
-      </div>
+      <section class="content-lg">
+        <div id="content-catalogue">
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-end mt-5 w-100"
+          >
+            {{!-- {{#each this}} --}}
+            <div style="width: 24rem; height:30rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 24rem; height:30rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 24rem; height: 30rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 24rem; height: 30rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 24rem; height: 30rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+
+            <div style="width: 24rem; height: 30rem">
+              <img
+                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                alt="{{title}}"
+                style="border-radius: 0.5rem;"
+              />
+              <div
+                class="p-2 d-flex justify-content-between align-items-center"
+              >
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="d-flex flex-column justify-self-center align-self-center"
+                >
+                  <span
+                    class="fw-semibold"
+                    style="color: #D78325; font-size:1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                </div>
+              </div>
+            </div>
+            {{!-- {{/each}} --}}
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    href="#"
+                    aria-label="Previous"
+                    id="prev-page"
+                  >
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a
+                    class="page-link"
+                    href="#"
+                    data-index="0"
+                  >1</a></li>
+                <li class="page-item"><a
+                    class="page-link"
+                    href="#"
+                    data-index="1"
+                  >2</a></li>
+                <li class="page-item"><a
+                    class="page-link"
+                    href="#"
+                    data-index="2"
+                  >3</a></li>
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    href="#"
+                    aria-label="Next"
+                    id="next-page"
+                  >
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
     </div>
-    <div id="content-catalogue">
-      Test
-    </div>
+  </section>
+  <div
+    style="background-color: #935831; position: absolute; top: 1000px; z-index: -1; width: 45%; height: 210rem;"
+  >
   </div>
-</section>
+</div>
