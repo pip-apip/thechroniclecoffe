@@ -1,51 +1,29 @@
-<div class="d-flex flex-column gap-1 justify-content-center mt-5">
+<div class="flex flex-col gap-1 justify-center mt-5">
   {{#each this}}
-    <div style="width: 21rem; height: 27rem">
+    <div
+      style="width: 21rem; height: 26rem;"
+      class="bg-stone-100 mb-3 pb-3 rounded-lg shadow-md flex flex-col justify-start"
+    >
       <img
-        src="https://sarahsvegankitchen.com/wp-content/uploads/2024/05/Vegan-Croissants-1.jpg"
-        class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+        src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2022/08/21/3401271-820752019.jpg?itok=e8c1hwwk"
+        class="w-auto h-75 rounded-t-lg mb-4"
         alt="{{title}}"
-        style="border-radius: 0.5rem;"
+        style="object-fit: cover"
       />
-      <div class="p-2 d-flex justify-content-between align-items-center">
-        <h5 class="card-title w-50">Croissants with choice of fruits</h5>
-        <div class="d-flex flex-column justify-self-center align-self-center">
-          <span
-            class="fw-semibold"
-            style="color: #D78325; font-size:1.2rem"
-          >$5.20<br /></span>
-          <span style="font-weight: 400; font-size:0.8rem">250gr</span>
+      <div class="flex flex-col gap-2 justify-start items-start px-3">
+        <div class="flex justify-center items-center gap-1 mb-1">
+          <div
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-2.5 py-1 me-2 hover:border-stone-600"
+          >Inspirational</div>
+          <div
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-2.5 py-1 me-2 hover:border-stone-600"
+          >Bussiness</div>
         </div>
+        <h5 class="font-semibold text-sm">Indonesian coffee exporter eye
+          potential in Middle East markets.</h5>
+        <p class="text-light text-xs">12 Sep 2025, 12.30</p>
+        <p class="text-light text-xs"><strong>Author : </strong>Chronicle</p>
       </div>
     </div>
   {{/each}}
 </div>
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous" id="prev-page">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a
-        class="page-link"
-        href="#"
-        data-index="0"
-      >1</a></li>
-    <li class="page-item"><a
-        class="page-link"
-        href="#"
-        data-index="1"
-      >2</a></li>
-    <li class="page-item"><a
-        class="page-link"
-        href="#"
-        data-index="2"
-      >3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next" id="next-page">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>

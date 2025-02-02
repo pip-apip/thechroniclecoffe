@@ -1,3 +1,50 @@
+$(document).ready(function () {
+  $("#navbar").load("javascript/template/navbar.html");
+});
+
+var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
+var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
+
+// Change the icons inside the button based on previous settings
+if (
+  localStorage.getItem("color-theme") === "dark" ||
+  (!("color-theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  themeToggleLightIcon.classList.remove("hidden");
+} else {
+  themeToggleDarkIcon.classList.remove("hidden");
+}
+
+var themeToggleBtn = document.getElementById("theme-toggle");
+
+themeToggleBtn.addEventListener("click", function () {
+  // toggle icons inside button
+  themeToggleDarkIcon.classList.toggle("hidden");
+  themeToggleLightIcon.classList.toggle("hidden");
+
+  // if set via local storage previously
+  if (localStorage.getItem("color-theme")) {
+    if (localStorage.getItem("color-theme") === "light") {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("color-theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("color-theme", "light");
+    }
+
+    // if NOT set via local storage previously
+  } else {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("color-theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("color-theme", "dark");
+    }
+  }
+});
+
 function loadTemplate(url) {
   return fetch(url).then((response) => response.text());
 }
@@ -5,14 +52,12 @@ function loadTemplate(url) {
 async function renderTemplates() {
   try {
     const [
-      navbarTemplateSource,
       landingTemplateSource,
       catalogueTemplateSource,
       topProductTemplateSource,
       articlesTemplateSource,
       footerTemplateSource,
     ] = await Promise.all([
-      loadTemplate("./javascript/template/navbar.hbs"),
       loadTemplate("./javascript/template/landing-page.hbs"),
       loadTemplate("./javascript/template/catalogue.hbs"),
       loadTemplate("./javascript/template/top-product.hbs"),
@@ -21,7 +66,6 @@ async function renderTemplates() {
     ]);
 
     // Compile the Handlebars templates
-    const navbarTemplate = Handlebars.compile(navbarTemplateSource);
     const landingTemplate = Handlebars.compile(landingTemplateSource);
     const catalogueTemplate = Handlebars.compile(catalogueTemplateSource);
     const topProductTemplate = Handlebars.compile(topProductTemplateSource);
@@ -29,7 +73,6 @@ async function renderTemplates() {
     const footerTemplate = Handlebars.compile(footerTemplateSource);
 
     // Render the templates
-    document.getElementById("navbar-chronicles").innerHTML = navbarTemplate([]);
     document.getElementById("landing-chronicles").innerHTML = landingTemplate(
       []
     );
@@ -71,11 +114,11 @@ function renderCatalogue(data) {
   const specificIndex = 2; // Change this to the desired index
   if (specificIndex >= 0 && specificIndex + 10 < data.length) {
     const specificData = [data[specificIndex], data[specificIndex + 10]];
-    loadTemplate("./javascript/template/catalogue.hbs").then(
+    loadTemplate("./javascript/template/catalogue-data.hbs").then(
       (templateSource) => {
         const template = Handlebars.compile(templateSource);
         const html = template(specificData);
-        console.log(html);
+        // console.log(html);
         document.getElementById("catalogue-content").innerHTML = html;
       }
     );

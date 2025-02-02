@@ -1,365 +1,386 @@
 <section id="catalogue" style="background-color: #E5DCD3" class="content-sm">
-  <div class="p-4 d-flex flex-column align-items-center justify-content-center">
+  <div class="p-4 flex flex-col items-center justify-center">
     <h1
-      class="p-hero fw-semibold text-center mt-4"
-      style="font-size: 4rem; color: #2E2C2A"
+      class="p-hero font-bold text-center mt-4"
+      style="font-size: 3.2rem; color: #2E2C2A; line-height:110%"
     >COFFEE MENU</h1>
     <p
-      class="text-center fw-semibold mt-4 reenie-beanie-regular"
+      class="text-center font-bold w-110 mt-4 reenie-beanie-regular"
       style="font-size: 1.33rem; color: #2E2C2A;"
     >From warm and smooth to cold and refreshing. There are endless drink option
       to find and love at Coffee House..</p>
-    <div class="d-flex flex-wrap gap-2 justify-content-center px-5">
+    <div class="flex flex-wrap gap-2 justify-center px-5 mt-2">
       <button
         type="button"
-        class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
-        style="border-radius: 2rem; border-color:#2E2C2A;"
-      >Cold Coffee</button>
+        class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+      >Craft Drink</button>
       <button
         type="button"
-        class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
-        style="border-radius: 2rem; border-color:#2E2C2A;"
-      >Craft Drinks</button>
-      <button
-        type="button"
-        class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
-        style="border-radius: 2rem; border-color:#2E2C2A;"
-      >With Coconut Milk</button>
-      <button
-        type="button"
-        class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
-        style="border-radius: 2rem; border-color:#2E2C2A;"
+        class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
       >Espresso Based</button>
       <button
         type="button"
-        class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
-        style="border-radius: 2rem; border-color:#2E2C2A;"
-      >Cappucino/Latte</button>
+        class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+      >Coconut Milk</button>
+      <button
+        type="button"
+        class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+      >Cold Coffee</button>
+      <button
+        type="button"
+        class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+      >Latte/Cappucino</button>
     </div>
 
-    <div id="catalogue-content">
-      <section class="content-sm">
-        <div class="d-flex flex-column gap-1 justify-content-center mt-5">
-          {{#each this}}
-            <div style="width: 21rem; height: 27rem">
-              <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
-                alt="{{title}}"
-                style="border-radius: 0.5rem;"
-              />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
-                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                <div
-                  class="d-flex flex-column justify-self-center align-self-center"
-                >
-                  <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
-                  >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
-                </div>
-              </div>
-            </div>
-          {{/each}}
-        </div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a
-                class="page-link"
-                href="#"
-                aria-label="Previous"
-                id="prev-page"
-              >
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a
-                class="page-link"
-                href="#"
-                data-index="0"
-              >1</a></li>
-            <li class="page-item"><a
-                class="page-link"
-                href="#"
-                data-index="1"
-              >2</a></li>
-            <li class="page-item"><a
-                class="page-link"
-                href="#"
-                data-index="2"
-              >3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next" id="next-page">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-
-      {{! Content MD }}
-
-      <section class="content-lg">
-        <div class="d-flex flex-column gap-1 justify-content-center mt-5">
-          {{#each this}}
-            <div style="width: 21rem; height: 27rem">
-              <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
-                alt="{{title}}"
-                style="border-radius: 0.5rem;"
-              />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
-                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                <div
-                  class="d-flex flex-column justify-self-center align-self-center"
-                >
-                  <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
-                  >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
-                </div>
-              </div>
-            </div>
-          {{/each}}
-        </div>
-        <nav aria-label="Page navigation example">
-          <ul class="pagination">
-            <li class="page-item">
-              <a
-                class="page-link"
-                href="#"
-                aria-label="Previous"
-                id="prev-page"
-              >
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item"><a
-                class="page-link"
-                href="#"
-                data-index="0"
-              >1</a></li>
-            <li class="page-item"><a
-                class="page-link"
-                href="#"
-                data-index="1"
-              >2</a></li>
-            <li class="page-item"><a
-                class="page-link"
-                href="#"
-                data-index="2"
-              >3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next" id="next-page">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </section>
-    </div>
+    <div id="catalogue-content"></div>
   </div>
 </section>
 
 {{! Large content }}
-<div id="catalogue content-lg">
+<div id="catalogue" class="content-lg relative">
   <section
     class="px-5 py-3 rounded-lg container my-5"
     style="background-color: #efe7e0"
   >
-    <div
-      class="d-flex flex-column align-items-center justify-content-center w-100"
-    >
-      <div class="d-flex justify-content-between align-items-center">
-        <div
-          class="d-flex flex-column justify-content-center align-items-start gap-1"
-        >
+    <div class="flex flex-col items-center justify-center w-100">
+      <div class="flex justify-between items-center">
+        <div class="flex flex-col justify-center items-start gap-1">
           <h1
-            class="p-hero fw-semibold text-start mt-4"
+            class="p-hero font-semibold text-start mt-4"
             style="font-size: 4rem; color: #2E2C2A"
           >COFFEE MENU</h1>
           <p
-            class="text-start fw-semibold reenie-beanie-regular"
+            class="text-start font-semibold reenie-beanie-regular"
             style="font-size: 1.33rem; color: #2E2C2A;"
           >From warm and smooth to cold and refreshing. There are endless drink
             option to find and love at Coffee House..</p>
         </div>
-        <div class="d-flex flex-wrap gap-2 justify-content-end px-5 h-100">
+        <div class="flex flex-wrap gap-2 justify-end px-5 h-100">
           <button
             type="button"
-            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            class="btn btn-outline-secondary font-semibold coffee-catalogue"
             style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
           >Cold Coffee</button>
           <button
             type="button"
-            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            class="btn btn-outline-secondary font-semibold coffee-catalogue"
             style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
           >Craft Drinks</button>
           <button
             type="button"
-            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            class="btn btn-outline-secondary font-semibold coffee-catalogue"
             style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
           >With Coconut Milk</button>
           <button
             type="button"
-            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            class="btn btn-outline-secondary font-semibold coffee-catalogue"
             style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
           >Espresso Based</button>
           <button
             type="button"
-            class="btn btn-outline-secondary fw-semibold coffee-catalogue"
+            class="btn btn-outline-secondary font-semibold coffee-catalogue"
             style="border-radius: 2rem; border-color:#2E2C2A; max-height:3rem;"
           >Cappucino/Latte</button>
         </div>
       </div>
       <section class="content-lg">
         <div id="content-catalogue">
-          <div
-            class="d-flex flex-wrap justify-content-between align-items-end mt-5 w-100"
-          >
+          <div class="flex flex-wrap justify-between items-end mt-5 w-100">
             {{!-- {{#each this}} --}}
-            <div style="width: 24rem; height:30rem">
+            <div
+              style="width: 24rem; height: 30rem;"
+              class="bg-white mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+            >
+              <strong><i class="fa-solid fa-location-dot"></i>
+                Sumatra Barat</strong>
               <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                src=".\assets\Robusta-Gayo.png"
+                class="mb-2 rounded-lg w-auto h-75"
                 alt="{{title}}"
-                style="border-radius: 0.5rem;"
+                style="border-radius: 0.5rem; object-fit: contain"
               />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
+              <div class="p-2 flex justify-between items-center">
                 <h5 class="card-title w-50">Bavarian Cappucinno</h5>
                 <div
-                  class="d-flex flex-column justify-self-center align-self-center"
+                  class="flex flex-col justify-self-center align-self-center"
                 >
                   <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
+                    class="font-semibold"
+                    style="color: #d78325; font-size: 1.2rem"
                   >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                  <span style="font-weight: 400; font-size: 0.8rem">500ml</span>
+                </div>
+              </div>
+              <div
+                class="container align-self-end flex justify-between items-center gap-3 mt-3"
+              >
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-leaf fa-lg"></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i
+                    class="fa-solid fa-fire fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              style="width: 24rem; height: 30rem;"
+              class="bg-white mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+            >
+              <strong><i class="fa-solid fa-location-dot"></i>
+                Sumatra Barat</strong>
+              <img
+                src=".\assets\Robusta-Java.png"
+                class="mb-2 rounded-lg w-auto h-75"
+                alt="{{title}}"
+                style="border-radius: 0.5rem; object-fit: contain"
+              />
+              <div class="p-2 flex justify-between items-center">
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="flex flex-col justify-self-center align-self-center"
+                >
+                  <span
+                    class="font-semibold"
+                    style="color: #d78325; font-size: 1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size: 0.8rem">500ml</span>
+                </div>
+              </div>
+              <div
+                class="container align-self-end flex justify-between items-center gap-3 mt-3"
+              >
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-leaf fa-lg"></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i
+                    class="fa-solid fa-fire fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+              </div>
+            </div>
+            <div
+              style="width: 24rem; height: 30rem;"
+              class="bg-white mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+            >
+              <strong><i class="fa-solid fa-location-dot"></i>
+                Sumatra Barat</strong>
+              <img
+                src=".\assets\Robusta-Toraja.png"
+                class="mb-2 rounded-lg w-auto h-75"
+                alt="{{title}}"
+                style="border-radius: 0.5rem; object-fit: contain"
+              />
+              <div class="p-2 flex justify-between items-center">
+                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
+                <div
+                  class="flex flex-col justify-self-center align-self-center"
+                >
+                  <span
+                    class="font-semibold"
+                    style="color: #d78325; font-size: 1.2rem"
+                  >$3.20<br /></span>
+                  <span style="font-weight: 400; font-size: 0.8rem">500ml</span>
+                </div>
+              </div>
+              <div
+                class="container align-self-end flex justify-between items-center gap-3 mt-3"
+              >
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-leaf fa-lg"></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i
+                    class="fa-solid fa-fire fa-lg"
+                    style="color: #00000076"
+                  ></i>
                 </div>
               </div>
             </div>
 
-            <div style="width: 24rem; height:30rem">
+            <div
+              style="width: 24rem; height: 30rem;"
+              class="bg-white mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+            >
+              <strong><i class="fa-solid fa-location-dot"></i>
+                Sumatra Barat</strong>
               <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                src=".\assets\Cup-Coffee-2.png"
+                class="mb-2 rounded-lg w-auto h-75"
                 alt="{{title}}"
-                style="border-radius: 0.5rem;"
+                style="border-radius: 0.5rem; object-fit: contain"
               />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
+              <div class="p-2 flex justify-between items-center">
                 <h5 class="card-title w-50">Bavarian Cappucinno</h5>
                 <div
-                  class="d-flex flex-column justify-self-center align-self-center"
+                  class="flex flex-col justify-self-center align-self-center"
                 >
                   <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
+                    class="font-semibold"
+                    style="color: #d78325; font-size: 1.2rem"
                   >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                  <span style="font-weight: 400; font-size: 0.8rem">500ml</span>
+                </div>
+              </div>
+              <div
+                class="container align-self-end flex justify-between items-center gap-3 mt-3"
+              >
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-leaf fa-lg"></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i
+                    class="fa-solid fa-fire fa-lg"
+                    style="color: #00000076"
+                  ></i>
                 </div>
               </div>
             </div>
 
-            <div style="width: 24rem; height: 30rem">
+            <div
+              style="width: 24rem; height: 30rem;"
+              class="bg-white mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+            >
+              <strong><i class="fa-solid fa-location-dot"></i>
+                Sumatra Barat</strong>
               <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                src=".\assets\Robusta-Java.png"
+                class="mb-2 rounded-lg w-auto h-75"
                 alt="{{title}}"
-                style="border-radius: 0.5rem;"
+                style="border-radius: 0.5rem; object-fit: contain"
               />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
+              <div class="p-2 flex justify-between items-center">
                 <h5 class="card-title w-50">Bavarian Cappucinno</h5>
                 <div
-                  class="d-flex flex-column justify-self-center align-self-center"
+                  class="flex flex-col justify-self-center align-self-center"
                 >
                   <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
+                    class="font-semibold"
+                    style="color: #d78325; font-size: 1.2rem"
                   >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                  <span style="font-weight: 400; font-size: 0.8rem">500ml</span>
+                </div>
+              </div>
+              <div
+                class="container align-self-end flex justify-between items-center gap-3 mt-3"
+              >
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-leaf fa-lg"></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                </div>
+
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i
+                    class="fa-solid fa-fire fa-lg"
+                    style="color: #00000076"
+                  ></i>
                 </div>
               </div>
             </div>
 
-            <div style="width: 24rem; height: 30rem">
+            <div
+              style="width: 24rem; height: 30rem;"
+              class="bg-white mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+            >
+              <strong><i class="fa-solid fa-location-dot"></i>
+                Sumatra Barat</strong>
               <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+                src=".\assets\Cup-Coffee.png"
+                class="mb-2 rounded-lg w-auto h-75"
                 alt="{{title}}"
-                style="border-radius: 0.5rem;"
+                style="border-radius: 0.5rem; object-fit: contain"
               />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
+              <div class="p-2 flex justify-between items-center">
                 <h5 class="card-title w-50">Bavarian Cappucinno</h5>
                 <div
-                  class="d-flex flex-column justify-self-center align-self-center"
+                  class="flex flex-col justify-self-center align-self-center"
                 >
                   <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
+                    class="font-semibold"
+                    style="color: #d78325; font-size: 1.2rem"
                   >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                  <span style="font-weight: 400; font-size: 0.8rem">500ml</span>
                 </div>
               </div>
-            </div>
-
-            <div style="width: 24rem; height: 30rem">
-              <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
-                alt="{{title}}"
-                style="border-radius: 0.5rem;"
-              />
               <div
-                class="p-2 d-flex justify-content-between align-items-center"
+                class="container align-self-end flex justify-between items-center gap-3 mt-3"
               >
-                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                <div
-                  class="d-flex flex-column justify-self-center align-self-center"
-                >
-                  <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
-                  >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-leaf fa-lg"></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
+                  <i
+                    class="fa-solid fa-leaf fa-lg"
+                    style="color: #00000076"
+                  ></i>
                 </div>
-              </div>
-            </div>
 
-            <div style="width: 24rem; height: 30rem">
-              <img
-                src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-                class="mb-2 rounded-lg object-fit-cover h-75 w-100"
-                alt="{{title}}"
-                style="border-radius: 0.5rem;"
-              />
-              <div
-                class="p-2 d-flex justify-content-between align-items-center"
-              >
-                <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                <div
-                  class="d-flex flex-column justify-self-center align-self-center"
-                >
-                  <span
-                    class="fw-semibold"
-                    style="color: #D78325; font-size:1.2rem"
-                  >$3.20<br /></span>
-                  <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+                <div class="flex justify-center items-center gap-1">
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i class="fa-solid fa-fire fa-lg"></i>
+                  <i
+                    class="fa-solid fa-fire fa-lg"
+                    style="color: #00000076"
+                  ></i>
                 </div>
               </div>
             </div>
@@ -409,7 +430,7 @@
     </div>
   </section>
   <div
-    style="background-color: #935831; position: absolute; top: 1000px; z-index: -1; width: 45%; height: 210rem;"
+    style="background-color: #935831; position: absolute; top: 2500px; z-index: -1; width: 45%; height: 120rem;"
   >
   </div>
 </div>

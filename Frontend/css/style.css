@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 .logo {
   width: auto;
   height: 4rem;
@@ -35,6 +38,18 @@
 .lato {
   font-family: "Lato", serif;
   font-weight: 200;
+  font-style: normal;
+}
+
+.lato-semilight {
+  font-family: "Lato", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-medium {
+  font-family: "Lato", serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -93,4 +108,27 @@
   .content-md {
     display: block; /* Show on larger screens */
   }
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+.collapse-new {
+  visibility: collapse;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }

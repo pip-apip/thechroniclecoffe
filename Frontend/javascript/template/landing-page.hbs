@@ -1,13 +1,13 @@
-<section class="content-lg">
-  <div style="background-color: #394034; height: 91vh; position: relative; overflow: hidden;">
-  <video autoplay muted loop id="myVideo" class="absolute w-100 h-100" style="object-fit: cover;">
+<section class="content-lg -z-2 max-w-screen">
+  <div style="background-color: #394034; height: 100vh; position: relative; overflow: hidden;">
+  <video autoplay muted loop id="myVideo" class="absolute w-screen h-screen" style="object-fit: cover;">
     <source src="assets/video_landing.mp4" type="video/mp4">
   </video>
   <div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #22261fba; z-index: 1;"></div>
-  <div class="d-flex justify-content-center align-items-center relative top-50 mb-5 p-5">
+  <div class="flex justify-center items-center relative top-50 mb-5 p-5">
     <div class="absolute left-60 z-2">
       <section id="first-hero" class="p-4" style="background-color: transparent; margin-bottom:4rem">
-        <div class="container d-flex flex-column justify-content-start my-4">
+        <div class="container flex flex-col justify-start my-4 animate__animated animate__fadeIn">
           <div class="mb-2 ms-3">
             <a href="#" aria-label="Instagram">
               <span class="p-3 me-2" style="color: white; border: 2px solid rgba(255, 255, 255, 0.634); border-radius: 8rem;">
@@ -21,20 +21,20 @@
             </a>
           </div>
           <div class="container">
-            <h1 class="p-hero text-light fw-bold text-start" style="width: 75%; font-size: 6rem;">
+            <h1 class="p-hero text-white fw-bold text-start" style="width: 75%; font-size: 6rem;">
               <span style="color: #D78325">COFFEE<br /> HOUSES</span> IN YOUR WAY
             </h1>
-            <p class="text-light reenie-beanie-regular w-50" style="font-size: 1.5rem;">
+            <p class="text-white reenie-beanie-regular w-50" style="font-size: 1.5rem;">
               Delicious handcrafted drinks and snacks made from the simplest, highest quality ingredients.
             </p>
           </div>
-          <button type="button" class="btn btn-warning btn-sm fs-4 text-light mt-2 ms-2 p-2" style="width: 25%; background-color: #D78325; border: none;">
+          <button type="button" class="btn btn-warning btn-sm fs-4 text-white mt-2 ms-2 p-2" style="width: 25%; background-color: #D78325; border: none;">
             Our new taste
           </button>
         </div>
       </section>
     </div>
-    <div class="absolute right-60 flex items-center justify-content-between gap-5 content-md" style="margin-bottom:10rem">
+    <div class="absolute right-60 flex items-center justify-between gap-5 content-md animate__animated animate__fadeIn z-3" style="margin-bottom:10rem">
       <div class="absolute right-95 z-1 w-100">
         <div>
         <img src="assets/coffee_masked.png"  alt="chronicles home coffee" style="width:auto; height: 65vh; object-fit: contain" class="rounded" />
@@ -42,7 +42,7 @@
           <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.854 10.803a.5.5 0 1 1-.708-.707L9.243 6H6.475a.5.5 0 1 1 0-1h3.975a.5.5 0 0 1 .5.5v3.975a.5.5 0 1 1-1 0V6.707z"/>
         </svg>
         </div>
-        <p class="poppins-light text-light w-100 fs-6" style="margin-top:1rem">
+        <p class="poppins-light text-white w-100 fs-6" style="margin-top:1rem">
                 Delicious handcrafted drinks and snacks made from the simplest, highest quality ingredients.
               </p>
       </div>
@@ -52,7 +52,7 @@
 </div>
   <section
     id="second-hero"
-    class="p-4 d-flex align-items-center justify-content-center"
+    class="p-4 flex items-center justify-center"
     style="background-color: #935831"
   >
     <div class="flex items-center justify-center">
@@ -69,37 +69,37 @@
     </div>
     </div>
     <div class="w-xl"><h1
-        class="p-hero text-light fw-semibold text-start mt-4"
+        class="p-hero text-white font-semibold text-start mt-4"
         style="font-size: 4.8rem"
       >DELICIOUS COFFEE TO GO</h1><p
-        class="text-light text-start"
+        class="text-white text-start"
         style="font-size: 1.1rem;"
       >For the price of one espresso, get two cappucinos. The beneficial deal is
         available through may 20.</p>
-      <div class="d-flex flex-wrap gap-2 justify-content-start">
+      <div class="flex flex-wrap gap-2 justify-start">
         <button
           type="button"
-          class="btn btn-outline-light rounded-full fw-semibold coffee-catalogue"
+          class="btn btn-outline-light rounded-full font-semibold coffee-catalogue"
           style="border-radius: 2rem; border-color:#FFFFFF; color: white"
         >Cold Coffee</button>
         <button
           type="button"
-          class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
+          class="btn btn-outline-secondary rounded-full font-semibold coffee-catalogue"
           style="border-radius: 2rem; border-color:#FFFFFF; color: white"
         >Craft Drinks</button>
         <button
           type="button"
-          class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
+          class="btn btn-outline-secondary rounded-full font-semibold coffee-catalogue"
           style="border-radius: 2rem; border-color:#FFFFFF; color: white"
         >With Coconut Milk</button>
         <button
           type="button"
-          class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
+          class="btn btn-outline-secondary rounded-full font-semibold coffee-catalogue"
           style="border-radius: 2rem; border-color:#FFFFFF; color: white"
         >Espresso Based</button>
         <button
           type="button"
-          class="btn btn-outline-secondary rounded-full fw-semibold coffee-catalogue"
+          class="btn btn-outline-secondary rounded-full font-semibold coffee-catalogue"
           style="border-radius: 2rem; border-color:#FFFFFF; color: white"
         >Cappucino/Latte</button>
       </div>
@@ -109,16 +109,16 @@
 
   <section
     id="third-hero"
-    class="p-4 d-flex flex-column align-items-center justify-content-center pt-5"
+    class="p-4 flex flex-col items-center justify-center pt-5"
     style="background-color: #E5DCD3"
   >
-  <div class="d-flex flex-column gap-2 justify-content-center align-items-center container">
+  <div class="flex flex-col gap-2 justify-center items-center container">
     <h1
       class="p-hero fw-bold lato text-center mt-4"
       style="font-size: 4.5rem; color: #2E2C2A"
     >COFFEE HOUSE</h1>
     <p
-      class="text-center fw-semibold w-75"
+      class="text-center font-semibold w-75"
       style="font-size: 1.2rem; color: #2E2C2A"
     >DELICIOUS HANDCRAFTED DRINKS AND SNACKS MADE FROM THE SIMPLEST, HIGHEST
       QUALITY INGREDIENTS COFFEE IS AT THE HEART OF WHAT WE DO, AND SO ARE ALL
@@ -131,7 +131,7 @@
       help you celebrate the little joys of each dat with us.</p>
     <button
       type="button"
-      class="btn btn-warning fs-4 text-light mt-2 ms-2 p-2"
+      class="btn btn-warning fs-4 text-white mt-2 ms-2 p-2"
       style="width : 20%; background-color: #D78325; border:color; border-color: #D78325;"
     >Our new taste</button>
     </div>
@@ -141,18 +141,16 @@
 {{! Small Version }}
 
 <section id="image-hero" class="object-fit-cover content-sm">
-  <img
-    src="assets/coffee_mobile.png"
-    alt="chronicles home coffee"
-    style="width:100vw; height: 90vh; object-fit: cover"
-  />
+  <video autoplay muted loop id="myVideo" class="w-screen h-screen" style="object-fit: cover;">
+    <source src="assets/video_landing.mp4" type="video/mp4">
+  </video>
 
-  <section id="first-hero" class="p-4" style="background-color: #394034;">
-    <div class="container d-flex flex-column justify-content-start my-4">
-      <div class="mb-2">
+  <section id="first-hero" class="p-12 flex flex-col justify-center items-center absolute top-0 bg-stone-950/70 w-screen h-screen" >
+    <div class="flex flex-col justify-center mt-12 mb-4">
+      <div class="flex justify-start items-center gap-2 mb-2">
         <a href="#" aria-label="Instagram">
           <span
-            class="p-2 me-2"
+            class="p-2"
             style="color: white; border: 2px solid rgba(255, 255, 255, 0.634); border-radius: 8rem;"
           >
             <i class="fa-brands fa-instagram fa-xl"></i>
@@ -169,68 +167,62 @@
       </div>
       <div>
         <h1
-          class="p-hero text-light fw-semibold text-start"
-          style="font-size: 4.5rem;"
+          class="text-white font-bold text-start p-0 mb-2 text-6xl"
+          style="line-height:110%"
         >
-          <span style="color: #D78325">COFFEE<br /> HOUSES</span>
+          <span style="color: #f49323">COFFEE <br> HOUSES</span>
           IN YOUR WAY
         </h1>
-        <p class="text-light reenie-beanie-regular" style="font-size: 1.33rem;">
+        <p class="text-white font-medium reenie-beanie-regular" style="font-size: 1.5rem;">
           Delicious handcrafted drinks and snacks made from the simplest,
           highest quality ingredients.
         </p>
       </div>
-      <button
-        type="button"
-        class="btn btn-warning fs-4 text-light mt-2 ms-2 p-2"
-        style="width: 50%; background-color: #D78325; border: none;"
-      >
-        Our new taste
-      </button>
+      <div class="w-50 mt-4">
+     <button type="button" class="text-white  flex items-center gap-2 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 shadow-lg shadow-purple-500/50 dark:shadow-lg dark:shadow-purple-800/80 font-semibold rounded-lg text-md px-5 py-2.5 text-center me-2 mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+</svg> Order Now</button>
+      </div>
     </div>
   </section>
   <section
     id="second-hero"
-    class="p-4 d-flex flex-column align-items-center justify-content-center"
+    class="p-4 flex flex-col h-screen items-center justify-center"
     style="background-color: #935831"
   >
     <h1
-      class="p-hero text-light fw-semibold text-center mt-4"
-      style="font-size: 4.5rem"
+      class="p-hero text-white font-semibold text-center mt-8 mb-4"
+      style="font-size: 3.5rem; line-height:110%"
     >DELICIOUS COFFEE TO GO</h1>
-    <p class="text-light text-center" style="font-size: 1rem;">For the price of
+    <p class="text-white text-center w-120 font-light" style="font-size: 1.1;">For the price of
       one espresso, get two cappucinos. The beneficial deal is available through
       may 20.</p>
     <img
       alt="coffee bags"
       src="assets/coffee_bag.png"
-      style="width: 80%; height: auto; object-fit: cover"
+      style="width: 60%; height: auto; object-fit: cover"
     />
   </section>
 
   <section
     id="third-hero"
-    class="p-4 d-flex flex-column align-items-center justify-content-center pt-0"
+    class="p-4 flex flex-col items-center justify-center pt-0 mt-8"
     style="background-color: #E5DCD3"
   >
     <h1
-      class="p-hero fw-semibold text-center mt-4"
-      style="font-size: 5.5rem; color: #2E2C2A"
-    >COFFEE<br /> HOUSE</h1>
+      class="p-hero font-bold text-center mt-4"
+      style="font-size: 3.8rem; color: #2E2C2A; line-height:110%"
+    >COFFEE HOUSE</h1>
     <p
-      class="text-center fw-semibold mt-4"
-      style="font-size: 1.2rem; color: #2E2C2A"
+      class="text-center font-semibold mt-4"
+      style="font-size: 1rem; color: #2E2C2A"
     >DELICIOUS HANDCRAFTED DRINKS AND SNACKS MADE FROM THE SIMPLEST, HIGHEST
       QUALITY INGREDIENTS COFFEE IS AT THE HEART OF WHAT WE DO, AND SO ARE ALL
       THE WAYS WE BRING YOU THE COFFEE HOUSE EXPERIENCE WHEREVER YOU ARE.</p>
-    <p class="text-center" style="font-size: 1.1rem; color: #2E2C2A">Wheter it's
+    <p class="text-center font-light w-110 mt-4" style="font-size: 1.1rem; color: #2E2C2A">Wheter it's
       a quick morning coffee from the nearest coffee shop or a quick midday
       snack, we have something for everyone. Here are some options to help you
-      celebrate the little joys of each dat with us.</p>
-    <button
-      type="button"
-      class="btn btn-warning fs-4 text-light mt-2 ms-2 p-2"
-      style="width : 40%; background-color: #D78325; border:color; border-color: #D78325;"
-    >Our new taste</button>
+      celebrate the little joys of each day with us.</p>
+<button type="button" class="text-white bg-orange-400 hover:bg-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-300 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-orange-900 mt-4">Our New Taste</button>
   </section>
 </section>

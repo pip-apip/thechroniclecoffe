@@ -1,74 +1,58 @@
 <section class="content-sm">
-  <div class="d-flex flex-column gap-1 justify-content-center mt-5">
+  <div class="flex flex-col gap-1 justify-center mt-5">
     {{#each this}}
-      <div style="width: 21rem; height: 27rem">
+      <div
+        style="width: 21rem; height: 26rem;"
+        class="bg-stone-100 mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+      >
+        <div class="font-medium flex items-center text-sm gap-2">
+          <i class="fa-solid fa-location-dot"></i>
+          Aceh</div>
         <img
-          src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
-          class="mb-2 rounded-lg object-fit-cover h-75 w-100"
+          src=".\assets\Robusta-Gayo.png"
+          class="rounded-lg w-auto h-75"
           alt="{{title}}"
-          style="border-radius: 0.5rem;"
+          style="border-radius: 0.5rem; object-fit: contain"
         />
-        <div class="p-2 d-flex justify-content-between align-items-center">
-          <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-          <div class="d-flex flex-column justify-self-center align-self-center">
+        <div class="p-2 flex justify-between items-start">
+          <div class="flex flex-col gap-2 justify-start items-start">
+            <h5 class="font-semibold w-50">Robusta Gayo</h5>
+            <div class="flex justify-center items-center gap-1">
+              <i class="fa-solid fa-fire fa-md"></i>
+              <i class="fa-solid fa-fire fa-md"></i>
+              <i class="fa-solid fa-fire fa-md" style="color: #00000076"></i>
+            </div>
+          </div>
+          <div class="flex flex-col justify-self-center align-self-center">
             <span
-              class="fw-semibold"
-              style="color: #D78325; font-size:1.2rem"
+              class="font-semibold"
+              style="color: #d78325; font-size: 1.2rem"
             >$3.20<br /></span>
-            <span style="font-weight: 400; font-size:0.8rem">500ml</span>
+            <span style="font-weight: 400; font-size: 0.8rem">500gr</span>
           </div>
         </div>
       </div>
     {{/each}}
   </div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous" id="prev-page">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="page-item"><a
-          class="page-link"
-          href="#"
-          data-index="0"
-        >1</a></li>
-      <li class="page-item"><a
-          class="page-link"
-          href="#"
-          data-index="1"
-        >2</a></li>
-      <li class="page-item"><a
-          class="page-link"
-          href="#"
-          data-index="2"
-        >3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next" id="next-page">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
 </section>
 
 {{! Content MD }}
 
 <section class="content-lg">
-  <div class="d-flex flex-column gap-1 justify-content-center mt-5">
+  <div class="flex flex-col gap-1 justify-center mt-5">
     {{#each this}}
       <div style="width: 21rem; height: 27rem">
         <img
-          src="https://www.health.com/thmb/YXxmAuCsJHtTWvSWPorjVx1F7AQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Health-GettyImages-TypesOfCoffee-b8f6f7382a1443109f74edb1050f9808.jpg"
+          src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-coffee-bag-3d-png-image_13147360.png"
           class="mb-2 rounded-lg object-fit-cover h-75 w-100"
           alt="{{title}}"
           style="border-radius: 0.5rem;"
         />
-        <div class="p-2 d-flex justify-content-between align-items-center">
+        <div class="p-2 flex justify-between items-center">
           <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-          <div class="d-flex flex-column justify-self-center align-self-center">
+          <div class="flex flex-col justify-self-center align-self-center">
             <span
-              class="fw-semibold"
+              class="font-semibold"
               style="color: #D78325; font-size:1.2rem"
             >$3.20<br /></span>
             <span style="font-weight: 400; font-size:0.8rem">500ml</span>
@@ -77,33 +61,5 @@
       </div>
     {{/each}}
   </div>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination">
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Previous" id="prev-page">
-          <span aria-hidden="true">&laquo;</span>
-        </a>
-      </li>
-      <li class="page-item"><a
-          class="page-link"
-          href="#"
-          data-index="0"
-        >1</a></li>
-      <li class="page-item"><a
-          class="page-link"
-          href="#"
-          data-index="1"
-        >2</a></li>
-      <li class="page-item"><a
-          class="page-link"
-          href="#"
-          data-index="2"
-        >3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#" aria-label="Next" id="next-page">
-          <span aria-hidden="true">&raquo;</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+
 </section>
