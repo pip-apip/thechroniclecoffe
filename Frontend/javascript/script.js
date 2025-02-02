@@ -95,16 +95,18 @@ async function renderTemplates() {
 async function fetchAndRenderData() {
   try {
     const response = await fetch(
-      "https://jsonplaceholder.typicode.com/photos?_limit=25"
+      "https://jsonplaceholder.typicode.com/photos?_limit=8"
     );
     const data = await response.json();
 
     // Render catalogue content
     renderCatalogue(data);
+    renderCatalogue2(data);
     // Render recommendation list
     renderRecommendationList(data);
     // Render blog data
     renderBlogData(data);
+    renderBlogData2(data);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -112,7 +114,7 @@ async function fetchAndRenderData() {
 
 function renderCatalogue(data) {
   const specificIndex = 2; // Change this to the desired index
-  if (specificIndex >= 0 && specificIndex + 10 < data.length) {
+  if (specificIndex >= 0 && specificIndex + 1 < data.length) {
     const specificData = [data[specificIndex], data[specificIndex + 10]];
     loadTemplate("./javascript/template/catalogue-data.hbs").then(
       (templateSource) => {
@@ -120,6 +122,23 @@ function renderCatalogue(data) {
         const html = template(specificData);
         // console.log(html);
         document.getElementById("catalogue-content").innerHTML = html;
+      }
+    );
+  } else {
+    console.error("Index out of bounds for catalogue");
+  }
+}
+
+function renderCatalogue2(data) {
+  const specificIndex = 2; // Change this to the desired index
+  if (specificIndex >= 0 && specificIndex + 1 < data.length) {
+    const specificData = data;
+    loadTemplate("./javascript/template/catalogue-data.hbs").then(
+      (templateSource) => {
+        const template = Handlebars.compile(templateSource);
+        const html = template(specificData);
+        // console.log(html);
+        document.getElementById("catalogue-content_2").innerHTML = html;
       }
     );
   } else {
@@ -151,7 +170,21 @@ function renderBlogData(data) {
     loadTemplate("./javascript/template/blog.hbs").then((templateSource) => {
       const template = Handlebars.compile(templateSource);
       const html = template(specificData);
-      document.getElementById("blog-data").innerHTML = html;
+      document.getElementById("blog-data2").innerHTML = html;
+    });
+  } else {
+    console.error("Index out of bounds for blog data");
+  }
+}
+
+function renderBlogData2(data) {
+  const specificIndex = 2; // Change this to the desired index
+  if (specificIndex >= 0 && specificIndex + 1 < data.length) {
+    const specificData = data;
+    loadTemplate("./javascript/template/blog.hbs").then((templateSource) => {
+      const template = Handlebars.compile(templateSource);
+      const html = template(specificData);
+      document.getElementById("blog-data2").innerHTML = html;
     });
   } else {
     console.error("Index out of bounds for blog data");
