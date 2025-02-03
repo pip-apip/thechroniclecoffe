@@ -170,7 +170,7 @@ function renderBlogData(data) {
     loadTemplate("./javascript/template/blog.hbs").then((templateSource) => {
       const template = Handlebars.compile(templateSource);
       const html = template(specificData);
-      document.getElementById("blog-data2").innerHTML = html;
+      document.getElementById("blog-data").innerHTML = html;
     });
   } else {
     console.error("Index out of bounds for blog data");
