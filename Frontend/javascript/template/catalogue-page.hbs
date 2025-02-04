@@ -1,0 +1,82 @@
+<section class="content-lg max-w-full">
+  <div class="flex flex-wrap justify-between items-center mt-5 px-8">
+    {{#each this}}
+      <div
+        style="width: 18rem;"
+        class="bg-stone-100 mb-4 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+      >
+        <div class="font-medium flex items-center text-sm gap-2">
+          <i class="fa-solid fa-location-dot"></i>
+          Aceh</div>
+        <img
+          src=".\assets\Robusta-Gayo.png"
+          class="rounded-lg w-auto h-75"
+          alt="{{title}}"
+          style="border-radius: 0.5rem; object-fit: contain"
+        />
+        <div
+          class="px-2 flex justify-between items-start mx-auto"
+          style="width:100%"
+        >
+          <div class="flex flex-col gap-2 justify-start items-start">
+            <h5 class="font-semibold">Robusta Gayo</h5>
+            <div class="flex justify-center items-center gap-1">
+              <i class="fa-solid fa-fire fa-md"></i>
+              <i class="fa-solid fa-fire fa-md"></i>
+              <i class="fa-solid fa-fire fa-md" style="color: #00000076"></i>
+            </div>
+          </div>
+          <div class="flex flex-col self-end">
+            <span
+              class="font-semibold"
+              style="color: #d78325; font-size: 1.2rem"
+            >$3.20<br /></span>
+            <span style="font-weight: 400; font-size: 0.8rem">500gr</span>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+
+<section class="content-sm w-full mt-8">
+
+  <div class="flex flex-wrap justify-center gap-4 items-center mx-auto">
+    {{#each this}}
+      <div
+        style="width: 12rem;"
+        class="bg-stone-100 px-4 pt-4 pb-5 rounded-lg shadow-md flex flex-col justify-start"
+      >
+        <div class="font-medium flex items-center text-xs gap-2">
+          <i class="fa-solid fa-location-dot"></i>
+          Aceh</div>
+        <img
+          src=".\assets\Robusta-Gayo.png"
+          class="rounded-lg w-auto h-40"
+          alt="{{title}}"
+          style="border-radius: 0.5rem; object-fit: contain"
+        />
+        <div
+          class="px-2 flex justify-between items-start mx-auto"
+          style="width:100%"
+        >
+          <div class="flex flex-col gap-2 justify-start items-start">
+            <h5 class="font-semibold text-sm">Robusta Gayo</h5>
+            <div class="flex justify-center items-center gap-1">
+              <i class="fa-solid fa-fire fa-sm"></i>
+              <i class="fa-solid fa-fire fa-sm"></i>
+              <i class="fa-solid fa-fire fa-sm" style="color: #00000076"></i>
+            </div>
+          </div>
+          <div class="flex flex-col self-end">
+            <span
+              class="font-semibold"
+              style="color: #d78325; font-size: 0.8rem"
+            >$3.20<br /></span>
+            <span style="font-weight: 400; font-size: 0.6rem">500gr</span>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

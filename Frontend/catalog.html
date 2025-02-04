@@ -27,7 +27,7 @@
   </head>
   <body style="background-color: #e5dcd3">
     <nav
-      class="border-gray-200 block absolute top-0 z-3 w-screen px-8 content-sm"
+      class="border-gray-200 block absolute top-0 w-screen px-8 content-sm sticky-top z-5 max-h-1/6 navbar-ch"
     >
       <div
         class="max-w-screen flex flex-wrap items-center justify-between mx-auto py-2 lg:px-32 sm:px-32"
@@ -89,7 +89,7 @@
             <li>
               <a
                 href="catalog.html"
-                class="text-white flex items-center gap-2 bg-orange-400 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 font-medium rounded-full text-xs px-3 py-2.5 me-2 mb-2 dark:bg-orange-400 dark:hover:bg-orange-600 dark:focus:ring-orange-600 dark:border-orange-700"
+                class="flex items-center gap-2 bg-orange-600 hover:bg-orange-500 focus:outline-none focus:ring-4 focus:ring-orange-300 rounded-full text-xs px-3 py-2.5 me-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-600 dark:border-orange-700 font-medium text-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -208,16 +208,16 @@
     </nav>
 
     <nav
-      class="border-gray-200 block absolute top-0 z-3 w-screen px-8 content-lg"
+      class="fixed border-gray-200 navbar-ch block top-0 w-screen px-8 content-lg sticky-top z-6 max-h-1/6"
     >
       <div
-        class="max-w-screen flex flex-wrap items-center justify-between mx-auto py-2 lg:px-32 sm:px-32"
+        class="max-w-screen flex flex-wrap items-center justify-between mx-auto py-2 lg:px-8 sm:px-8"
       >
         <a
           href="https://flowbite.com/"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="assets/logo.png" class="h-24" alt="Flowbite Logo" />
+          <img src="assets/logo.png" class="h-16" alt="Flowbite Logo" />
         </a>
         <button
           data-collapse-toggle="navbar-default"
@@ -258,7 +258,7 @@
             <li>
               <a
                 href="catalog.html"
-                class="block py-2 px-3 text-white/90 text-sm text-light bg-transparent"
+                class="block py-2 px-3 text-white/90 text-sm text-light bg-transparent font-bold underline"
                 aria-current="page"
                 >Menu</a
               >
@@ -306,795 +306,293 @@
         </button>
       </div>
     </nav>
-    <div id="catalogue-data" class="flex justify-start">
-      <div
-        class="flex-shrink-0 text-white p-4 z-3 sticky-left shadow-md"
-        style="width: 280px; background-color: #fff9f4; color: white"
+    <div
+      id="catalogue-data"
+      class="flex justify-between min-w-screen min-h-screen content-lg"
+    >
+      <aside
+        id="logo-sidebar"
+        class="fixed block top-0 left-0 z-5 min-w-1/6 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-stone-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        aria-label="Sidebar"
       >
-        <h1 class="text-dark fs-4 lato-medium mb-3">Category</h1>
-        <ul class="text-dark" style="list-style-type: disc">
-          <!-- Home Section -->
-          <li class="mb-1">
-            <button
-              class="btn btn-toggle d-inline-flex items-center rounded border-0 collapsed fs-6 fw-semibold"
-              data-bs-toggle="collapse"
-              data-bs-target="#home-collapse"
-              aria-expanded="true"
-              style="color: #2e2c2a"
-            >
-              Home
-            </button>
-          </li>
-
-          <!-- Coffee Beans Section -->
-          <li class="mb-1">
-            <button
-              class="btn btn-toggle d-inline-flex items-center rounded border-0 collapsed fs-6 fw-semibold"
-              data-bs-toggle="collapse"
-              data-bs-target="#coffee-beans-collapse"
-              aria-expanded="false"
-              style="color: #2e2c2a"
-            >
-              Coffee Beans
-            </button>
-            <div class="collapse" id="coffee-beans-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Single Origin</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Blends</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Decaf</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Organic</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Brewing Equipment Section -->
-          <li class="mb-1">
-            <button
-              class="btn btn-toggle d-inline-flex items-center rounded border-0 collapsed fs-6 fw-semibold"
-              data-bs-toggle="collapse"
-              data-bs-target="#brewing-equipment-collapse"
-              aria-expanded="false"
-              style="color: #2e2c2a"
-            >
-              Brewing Equipment
-            </button>
-            <div class="collapse" id="brewing-equipment-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >French Press</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Pour-Over</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Espresso Machines</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Coffee Grinders</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Accessories Section -->
-          <li class="mb-1">
-            <button
-              class="btn btn-toggle d-inline-flex items-center rounded border-0 collapsed fs-6 fw-semibold"
-              data-bs-toggle="collapse"
-              data-bs-target="#accessories-collapse"
-              aria-expanded="false"
-              style="color: #2e2c2a"
-            >
-              Accessories
-            </button>
-            <div class="collapse" id="accessories-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Mugs & Cups</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Coffee Filters</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Thermoses</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Coffee Scales</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-
-          <!-- Merchandise Section -->
-          <li class="mb-1">
-            <button
-              class="btn btn-toggle d-inline-flex items-center rounded border-0 collapsed fs-6 fw-semibold"
-              data-bs-toggle="collapse"
-              data-bs-target="#merchandise-collapse"
-              aria-expanded="false"
-              style="color: #2e2c2a"
-            >
-              Merchandise
-            </button>
-            <div class="collapse" id="merchandise-collapse">
-              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >T-Shirts</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Hats</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Tote Bags</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-dark d-inline-flex text-decoration-none rounded"
-                    style="color: #2e2c2a"
-                    >Stickers</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="p-4">
-        <section class="px-5 py-3 rounded-lg" style="background-color: #f8f4f0">
-          <div class="flex flex-col items-center justify-center w-screen">
-            <div class="flex justify-between items-center w-screen">
-              <div class="flex flex-col justify-between items-start gap-1 p-0">
-                <a class="navbar-brand mt-4" href="index.html"
-                  ><img
-                    src="assets/logo_white.png"
-                    alt="chronicles coffee"
-                    style="width: auto; height: 8rem"
-                /></a>
-                <p
-                  class="text-start fw-semibold reenie-beanie-regular w-75"
-                  style="font-size: 1.2rem; color: #2e2c2a"
+        <div
+          class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800 mt-12"
+        >
+          <ul class="space-y-2 font-medium">
+            <li>
+              <a
+                href="#"
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 18 18"
                 >
-                  From warm and smooth to cold and refreshing. There are endless
-                  drink option to find and love at Coffee House..
-                </p>
-              </div>
-              <div class="flex flex-wrap gap-2 justify-end px-5 h-100 w-50">
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  Cold Coffee
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  Craft Drinks
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  With Coconut Milk
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  Espresso Based
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  Cappucino/Latte
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  Americano
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-outline-secondary fw-semibold coffee-catalogue"
-                  style="
-                    border-radius: 2rem;
-                    border-color: #2e2c2a;
-                    max-height: 3rem;
-                  "
-                >
-                  Cappucino/Latte
-                </button>
-              </div>
-            </div>
-            <section class="content-lg mt-5">
-              <div id="content-catalogue">
-                <div class="flex justify-between">
-                  <input
-                    type="search"
-                    class="form-control w-25 mb-3"
-                    placeholder="Search..."
-                    aria-label="Search"
+                  <path
+                    d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z"
                   />
-                  <div class="dropdown text-end">
-                    <a
-                      href="#"
-                      class="d-block link-body-emphasis text-decoration-none dropdown-toggle p-2 fs-5 fw-semibold"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="fa-solid fa-filter"></i>
-                    </a>
-                    <ul class="dropdown-menu text-small" style="">
-                      <li><a class="dropdown-item" href="#">Coffee</a></li>
-                      <li><a class="dropdown-item" href="#">Cappucino</a></li>
-                      <li><a class="dropdown-item" href="#">Latte</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div
-                  class="flex flex-wrap justify-between items-end w-screen gap-2"
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap"
+                  >Recommendation</span
                 >
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Robusta-Gayo.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
-                        >
-                      </div>
-                    </div>
+                <span
+                  class="inline-flex items-center justify-center px-2 ms-3 text-sm font-medium text-gray-200 bg-gray-100 rounded-full dark:bg-red-700 dark:text-gray-300"
+                  >Hot</span
+                >
+              </a>
+            </li>
+            <li>
+              <button
+                type="button"
+                id="dropdownHelperButton"
+                data-dropdown-toggle="dropdownHelper"
+                aria-hidden="true"
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+              >
+                <svg
+                  class="shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z"
+                  />
+                </svg>
+                <span class="flex-1 ms-3 whitespace-nowrap">Origin</span>
+                <span
+                  class="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300"
+                  >3</span
+                >
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownHelper"
+                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-60 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                  aria-labelledby="dropdownHelperButton"
+                >
+                  <li>
                     <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
+                      class="flex p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
+                      <div class="flex items-center h-5">
+                        <input
+                          id="helper-checkbox-1"
+                          aria-describedby="helper-checkbox-text-1"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                        />
                       </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Cup-Coffee.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
+                      <div class="ms-2 text-sm">
+                        <label
+                          for="helper-checkbox-1"
+                          class="font-medium text-gray-900 dark:text-gray-300"
                         >
+                          <div>Sumatra</div>
+                          <p
+                            id="helper-checkbox-text-1"
+                            class="text-xs font-normal text-gray-500 dark:text-gray-300"
+                          >
+                            Some helpful instruction goes over here.
+                          </p>
+                        </label>
                       </div>
                     </div>
+                  </li>
+                  <li>
                     <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
+                      class="flex p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
+                      <div class="flex items-center h-5">
+                        <input
+                          id="helper-checkbox-2"
+                          aria-describedby="helper-checkbox-text-2"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                        />
                       </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Cup-Coffee-2.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
+                      <div class="ms-2 text-sm">
+                        <label
+                          for="helper-checkbox-2"
+                          class="font-medium text-gray-900 dark:text-gray-300"
                         >
+                          <div>Aceh</div>
+                          <p
+                            id="helper-checkbox-text-2"
+                            class="text-xs font-normal text-gray-500 dark:text-gray-300"
+                          >
+                            Some helpful instruction goes over here.
+                          </p>
+                        </label>
                       </div>
                     </div>
+                  </li>
+                  <li>
                     <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
+                      class="flex p-2 rounded-sm hover:bg-gray-100 dark:hover:bg-gray-600"
                     >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
+                      <div class="flex items-center h-5">
+                        <input
+                          id="helper-checkbox-3"
+                          aria-describedby="helper-checkbox-text-3"
+                          type="checkbox"
+                          value=""
+                          class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                        />
                       </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Robusta-Gayo.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
+                      <div class="ms-2 text-sm">
+                        <label
+                          for="helper-checkbox-3"
+                          class="font-medium text-gray-900 dark:text-gray-300"
                         >
+                          <div>Kalimantan</div>
+                          <p
+                            id="helper-checkbox-text-3"
+                            class="text-xs font-normal text-gray-500 dark:text-gray-300"
+                          >
+                            Some helpful instruction goes over here.
+                          </p>
+                        </label>
                       </div>
                     </div>
-                    <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
-                    >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Robusta-Gayo.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
-                    >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Robusta-Toraja.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
-                    >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Robusta-Java.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
-                    >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    style="width: 24rem; height: 30rem"
-                    class="mb-3 px-4 pt-4 pb-5 rounded-lg shadow-md bg-white flex flex-col justify-start"
-                  >
-                    <strong
-                      ><i class="fa-solid fa-location-dot"></i> Sumatra
-                      Barat</strong
-                    >
-                    <img
-                      src=".\assets\Robusta-Toraja.png"
-                      class="mb-2 rounded-lg w-auto h-75"
-                      alt="{{title}}"
-                      style="border-radius: 0.5rem; object-fit: contain"
-                    />
-                    <div class="p-2 flex justify-between items-center">
-                      <h5 class="card-title w-50">Bavarian Cappucinno</h5>
-                      <div
-                        class="flex flex-col justify-self-center align-self-center"
-                      >
-                        <span
-                          class="fw-semibold"
-                          style="color: #d78325; font-size: 1.2rem"
-                          >$3.20<br
-                        /></span>
-                        <span style="font-weight: 400; font-size: 0.8rem"
-                          >500ml</span
-                        >
-                      </div>
-                    </div>
-                    <div
-                      class="container align-self-end flex justify-between items-center gap-3 mt-3"
-                    >
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-leaf fa-lg"></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                        <i
-                          class="fa-solid fa-leaf fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-
-                      <div class="flex justify-center items-center gap-1">
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i class="fa-solid fa-fire fa-lg"></i>
-                        <i
-                          class="fa-solid fa-fire fa-lg"
-                          style="color: #00000076"
-                        ></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
-            </section>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <div
+        class="block p-4 z-4 relative top-25 -right-75 rounded-lg w-4/5"
+        style="background-color: #f8f4f0"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <div class="flex justify-between items-center w-full">
+            <div
+              class="flex flex-col justify-between items-start gap-1 px-8 w-1/2"
+            >
+              <a class="navbar-brand mt-4" href="index.html"
+                ><img
+                  src="assets/logo_white.png"
+                  alt="chronicles coffee"
+                  style="width: auto; height: 6rem"
+              /></a>
+              <p
+                class="text-start font-light w-80"
+                style="font-size: 0.8rem; color: #2e2c2a"
+              >
+                From warm and smooth to cold and refreshing.<br />
+                There are endless drink option to find and love at Coffee
+                House..
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-1 justify-end px-6 items-end w-1/2">
+              <button
+                type="button"
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+              >
+                Craft Drink
+              </button>
+              <button
+                type="button"
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+              >
+                Espresso Based
+              </button>
+              <button
+                type="button"
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+              >
+                Coconut Milk
+              </button>
+              <button
+                type="button"
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+              >
+                Cold Coffee
+              </button>
+              <button
+                type="button"
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+              >
+                Latte/Cappucino
+              </button>
+            </div>
           </div>
-        </section>
+          <section class="content-lg mt-5">
+            <div id="catalogue-content_2" class="px-8"></div>
+          </section>
+        </div>
       </div>
     </div>
+
+    <section
+      id="catalogue"
+      style="background-color: #e5dcd3"
+      class="content-sm"
+    >
+      <div
+        class="p-4 flex flex-col items-center justify-center relative top-25"
+      >
+        <h1
+          class="p-hero font-bold text-center mt-4"
+          style="font-size: 3.2rem; color: #2e2c2a; line-height: 110%"
+        >
+          COFFEE MENU
+        </h1>
+        <p
+          class="text-center w-110 mt-4 font-light mb-2"
+          style="font-size: 1rem; color: #2e2c2a"
+        >
+          From warm and smooth to cold and refreshing. There are endless drink
+          option to find and love at Coffee House..
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center px-5 mt-2">
+          <button
+            type="button"
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+          >
+            Craft Drink
+          </button>
+          <button
+            type="button"
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+          >
+            Espresso Based
+          </button>
+          <button
+            type="button"
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+          >
+            Coconut Milk
+          </button>
+          <button
+            type="button"
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+          >
+            Cold Coffee
+          </button>
+          <button
+            type="button"
+            class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-5 py-2.5 me-2 mb-2 hover:border-stone-600"
+          >
+            Latte/Cappucino
+          </button>
+        </div>
+
+        <div id="catalogue-content" class="mx-auto"></div>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script
       src="https://kit.fontawesome.com/dbf5af6bac.js"
