@@ -25,6 +25,17 @@
         document.documentElement.classList.remove("dark");
       }
     </script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
   </head>
   <body style="background-color: #e5dcd3" class="max-w-screen">
     <nav class="border-gray-200 absolute top-0 z-3 w-screen px-8 content-sm">
@@ -128,7 +139,7 @@
             </li>
             <li>
               <a
-                type="company.html"
+                type="csr.html"
                 class="text-white items-center flex gap-2 bg-orange-400 hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 font-medium rounded-full text-xs px-3 py-2.5 me-2 mb-2 dark:bg-orange-400 dark:hover:bg-orange-600 dark:focus:ring-orange-600 dark:border-orange-700"
               >
                 <svg
@@ -143,7 +154,7 @@
                     d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M4.882 1.731a.48.48 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.7.7 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a1 1 0 0 0-.462-.04 7 7 0 0 1 2.45-2.027m-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.8.8 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.45.45 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282l.04-.001a7.003 7.003 0 0 1-12.658.905Z"
                   />
                 </svg>
-                About Us
+                CSR
               </a>
             </li>
             <li class="hidden">
@@ -270,10 +281,10 @@
             </li>
             <li>
               <a
-                href="company.html"
+                href="csr.html"
                 class="block py-2 px-3 text-white/90 text-sm text-light bg-transparent"
                 aria-current="page"
-                >About Us</a
+                >CSR</a
               >
             </li>
           </ul>
@@ -308,8 +319,532 @@
     <div id="catalogue-chronicles"></div>
     <div id="top-product-chronicles"></div>
     <div id="recommendation-list-chronicles"></div>
-    <div id="blog-chronicles"></div>
-    <div id="footer-chronicles"></div>
+
+    <div
+      id="catalogue-data"
+      class="flex justify-between w-5/6 content-lg px-8 mx-auto"
+    >
+      <div
+        class="block p-4 z-4 my-8 rounded-lg w-full"
+        style="background-color: #f8f4f0"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <div class="flex justify-between items-start w-full">
+            <div
+              class="flex flex-col justify-between items-start gap-1 px-8 w-1/2"
+            >
+              <a class="navbar-brand mt-4" href="index.html"
+                ><img
+                  src="assets/logo_white.png"
+                  alt="chronicles coffee"
+                  style="width: auto; height: 4rem"
+              /></a>
+            </div>
+            <div class="p-4 flex flex-col items-end justify-center">
+              <h1
+                class="p-hero font-bold text-center"
+                style="font-size: 2rem; color: #2e2c2a; line-height: 110%"
+              >
+                COFFEE JOURNEY
+              </h1>
+              <p
+                class="text-end w-110 mt-2 font-light"
+                style="font-size: 0.7rem; color: #2e2c2a"
+              >
+                From warm and smooth to cold and refreshing. There are endless
+                drink option to find and love at Coffee House..
+              </p>
+            </div>
+          </div>
+          <section class="content-lg mt-2">
+            <div class="w-full mx-auto p-4">
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://img.jakpost.net/c/2017/04/17/2017_04_17_25228_1492395137._large.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Indonesian coffee exporter eye potential in Middle East
+                      markets.</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKgEDevoLd6uAl68sbixnmxxqG3XWIjs5XbDurGWC4UwS7-2BZ5rm-4_tOwOgubO0IPIs&usqp=CAU"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 2</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://img.qraved.co/v2/image/data/main-photo-1543960737484-x.png"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 3</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://media.istockphoto.com/id/1199678330/photo/different-type-of-roasting-coffee-beans-luwak-on-a-coffee-plantation-in-asia.jpg?s=612x612&w=0&k=20&c=532lG3f5Zfo_dki75nsNH6Mrc7KOctiYoMSeeaxM-Cs="
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 4</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://lh3.googleusercontent.com/-4hTwaudzudiCN-R3ycEaVX9__9U7qo4aRY4MCaV0QIDBsYU8pFezGTJA-NiFICYVJZlNzeWFSxxpTzdE8mmx5y7Pb4V2Fx9VfFEvpLzLj00xCFx9EqJxyXrNdkgX0wfaCBG9aB0"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 5</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://visty.vn/wp-content/uploads/2019/12/caphe-indonesia-gayo-sumatra-9.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 6</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://static.wixstatic.com/media/db9f0d_37eab72044864e52ac25ec80bd51f617~mv2.jpg/v1/fill/w_568,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/db9f0d_37eab72044864e52ac25ec80bd51f617~mv2.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 7</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://cdnpro.eraspace.com/media/mageplaza/blog/post/k/o/kopiterbaikindonesia_primary.jpeg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 8</span
+                    >
+                  </div>
+                </div>
+                <div class="relative group">
+                  <img
+                    class="h-full max-w-full rounded-lg object-cover"
+                    src="https://www.nescafe.com/id/sites/default/files/2023-08/Jenis_Kopi_di_Indonesia_yang_Sukses_Mendunia_Apa_Saja_hero.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <span class="text-white text-lg font-semibold"
+                      >Image 9</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div
+            class="w-full max-w-full p-4 rounded-lg shadow-lg"
+            style="background-color: #fcfcfc"
+          >
+            <div class="flex flex-col items-center justify-center">
+              <h1
+                class="p-hero font-bold text-center"
+                style="font-size: 1.3rem; color: #2e2c2a; line-height: 110%"
+              >
+                WHERE TO FIND US
+              </h1>
+              <p
+                class="text-center w-110 mt-1 font-light mb-2"
+                style="font-size: 0.8rem; color: #2e2c2a"
+              >
+                From warm and smooth to cold and refreshing. There are endless
+                drink option to find and love at Coffee House..
+              </p>
+            </div>
+
+            <div class="h-100" id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-page">
+      <div class="content-sm" style="background-color: #935831">
+        <section
+          id="second-hero"
+          class="px-5 py-3 flex flex-col items-start justify-start"
+        >
+          <h1
+            class="p-hero text-white font-semibold text-start mt-4"
+            style="font-size: 1.5rem"
+          >
+            STILL YOU NEED OUR SUPPORT?
+          </h1>
+          <p
+            class="text-white text-light text-start font-light"
+            style="font-size: 0.8rem"
+          >
+            For the price of one espresso, get two cappucinos. The beneficial
+            deal is available through may 20.
+          </p>
+          <nav class="navbar mt-2" style="background-color: #935831">
+            <form
+              class="max-w-sm mx-auto flex justify-center items-center gap-2"
+            >
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                >
+                  <svg
+                    class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 16"
+                  >
+                    <path
+                      d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                    />
+                    <path
+                      d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="email-address-icon"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                  placeholder="name@chronicles.com"
+                />
+              </div>
+              <button
+                type="button"
+                class="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2"
+              >
+                <svg
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+                <span class="sr-only">Icon description</span>
+              </button>
+            </form>
+          </nav>
+          <div
+            style="width: 100%; height: 1.5px; background-color: white"
+            class="my-3"
+          ></div>
+          <div class="text-white flex flex-col mt-3">
+            <h5 class="mb-3 font-bold">Contact us</h5>
+            <p class="text-sm"><strong>Email: </strong> ch@email.com</p>
+            <p class="text-sm"><strong>Phone: </strong> +71 2345 7653</p>
+            <p class="text-sm">
+              <strong>Address: </strong> st. Marshall Disrict 24
+            </p>
+          </div>
+          <div class="text-white flex flex-col mt-3">
+            <h5 class="mb-3 font-bold">CSR</h5>
+            <p class="text-xs text-light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
+              turpis vitae dolor placerat sagittis ut scelerisque ligula. Mauris
+              posuere id mi in egestas. Proin ante est, maximus nec eleifend sit
+              amet, faucibus vel leo. Maecenas laoreet magna purus, at laoreet
+              neque volutpat sit amet. Mauris sed porttitor purus, in ultrices
+              justo. Proin non ultricies elit. Fusce interdum consequat risus,
+              sit amet viverra libero. Donec vel augue gravida, lobortis tellus
+              a, laoreet lectus.
+            </p>
+          </div>
+
+          <div class="text-white flex flex-col mt-3">
+            <h5 class="mb-3 font-bold">Opening Hours</h5>
+            <div
+              class="flex gap-4 justify-center items-center align-content-center"
+            >
+              <div style="background-color: #d78325" class="p-3 rounded-lg">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div class="flex flex-col justify-center items-start">
+                <p class="text-sm font-semibold">Mon - Sat (8.00 - 6.00).</p>
+                <p class="text-sm font-semibold">Sunday - Closed.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <nav
+          class="custom-navbar navbar navbar navbar-expand-md navbar-dark navbar-ch z-3 sticky-top pb-0"
+          arial-label="Chronicles navigation bar"
+        >
+          <div class="px-5 py-3 flex justify-between items-center">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                src="assets/logo.png"
+                alt="chronicles coffee"
+                class="w-auto h-12"
+            /></a>
+
+            <div>
+              <span
+                class="py-1 px-2 me-2"
+                style="
+                  color: white;
+                  border: 2px solid rgba(255, 255, 255, 0.634);
+                  border-radius: 8rem;
+                "
+                ><i class="fa-brands fa-instagram fa-md"></i
+              ></span>
+              <span
+                class="py-1 px-2"
+                style="
+                  color: white;
+                  border: 2px solid rgba(255, 255, 255, 0.634);
+                  border-radius: 8rem;
+                "
+                ><i class="fa-brands fa-facebook fa-md"></i
+              ></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <section class="content-lg" style="background-color: #935831">
+        <div
+          id="second-hero"
+          class="container py-4 px-8 mx-auto flex flex-col items-start justify-start w-screen"
+        >
+          <div
+            class="flex flex-col justify-start items-start gap-2"
+            style="width: 100%"
+          >
+            <div>
+              <h1
+                class="p-hero text-white font-semibold text-start mt-4"
+                style="font-size: 1.4rem"
+              >
+                STILL YOU NEED OUR SUPPORT?
+              </h1>
+              <p
+                class="text-white text-start font-light"
+                style="font-size: 1rem"
+              >
+                For the price of one espresso, get two cappucinos. The
+                beneficial deal is available through may 20.
+              </p>
+            </div>
+            <nav class="navbar" style="background-color: #935831">
+              <form
+                class="max-w-sm mx-auto flex justify-center items-center gap-2"
+              >
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+                  >
+                    <svg
+                      class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 20 16"
+                    >
+                      <path
+                        d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"
+                      />
+                      <path
+                        d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="email-address-icon"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
+                    placeholder="name@chronicles.com"
+                  />
+                </div>
+                <button
+                  type="button"
+                  class="text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                  </svg>
+                  <span class="sr-only">Icon description</span>
+                </button>
+              </form>
+            </nav>
+          </div>
+          <div
+            style="width: 100%; height: 1.5px; background-color: white"
+            class="my-3"
+          ></div>
+          <div class="flex justify-between items-start">
+            <div class="text-white flex flex-col mt-3 w-1/6">
+              <h5 class="mb-3 font-bold">Contact us</h5>
+              <p class="text-sm"><strong>Email: </strong> ch@email.com</p>
+              <p class="text-sm"><strong>Phone: </strong> +71 2345 7653</p>
+              <p class="text-sm">
+                <strong>Address: </strong> st. Marshall Disrict 24
+              </p>
+            </div>
+
+            <div class="text-white flex flex-col mt-3 w-3/6">
+              <h5 class="mb-3 font-bold">CSR</h5>
+              <p class="text-xs text-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in
+                turpis vitae dolor placerat sagittis ut scelerisque ligula.
+                Mauris posuere id mi in egestas. Proin ante est, maximus nec
+                eleifend sit amet, faucibus vel leo. Maecenas laoreet magna
+                purus, at laoreet neque volutpat sit amet. Mauris sed porttitor
+                purus, in ultrices justo. Proin non ultricies elit. Fusce
+                interdum consequat risus, sit amet viverra libero. Donec vel
+                augue gravida, lobortis tellus a, laoreet lectus.
+              </p>
+            </div>
+
+            <div class="text-white flex flex-col justify-start mt-3 w-1/6">
+              <h5 class="mb-3 font-bold">Opening Hours</h5>
+              <div
+                class="flex gap-4 justify-center items-center align-content-center"
+              >
+                <div style="background-color: #d78325" class="p-3 rounded-lg">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="flex flex-col justify-center items-start">
+                  <p class="text-sm font-semibold">Mon - Sat (8.00 - 6.00).</p>
+                  <p class="text-sm font-semibold">Sunday - Closed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav
+          class="custom-navbar navbar navbar navbar-expand-md navbar-dark navbar-ch z-3 sticky-top pb-0"
+          arial-label="Chronicles navigation bar"
+        >
+          <div class="px-8 py-3 mx-auto flex justify-between items-center">
+            <a class="navbar-brand" href="index.html"
+              ><img
+                src="assets/logo.png"
+                alt="chronicles coffee"
+                class="w-auto h-12"
+            /></a>
+
+            <div>
+              <span
+                class="py-1 px-2 me-2"
+                style="
+                  color: white;
+                  border: 2px solid rgba(255, 255, 255, 0.634);
+                  border-radius: 8rem;
+                "
+                ><i class="fa-brands fa-instagram fa-md"></i
+              ></span>
+              <span
+                class="py-1 px-2"
+                style="
+                  color: white;
+                  border: 2px solid rgba(255, 255, 255, 0.634);
+                  border-radius: 8rem;
+                "
+                ><i class="fa-brands fa-facebook fa-md"></i
+              ></span>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </div>
+
+    <script>
+      // Initialize the map and set its view to Jakarta
+
+      const map = L.map("map").setView([-6.4313695, 106.8928713], 12); // Coordinates for Jakarta
+
+      // Add OpenStreetMap tile layer
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      // Add a marker for Jakarta
+
+      const marker = L.marker([-6.4313695, 106.8928713]).addTo(map);
+
+      marker
+        .bindPopup("<b>The Chronicles</b><br>This is our Headquarters.")
+        .openPopup();
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script
       src="https://kit.fontawesome.com/dbf5af6bac.js"

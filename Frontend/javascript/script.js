@@ -2,6 +2,10 @@ $(document).ready(function () {
   $("#navbar").load("javascript/template/navbar.html");
 });
 
+$(document).ready(function () {
+  $("#footer").load("javascript/template/footer.html");
+});
+
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
 
@@ -86,7 +90,6 @@ async function renderTemplates() {
     console.log("Templates rendered successfully");
 
     // Call the function to fetch data after templates are rendered
-    await fetchAndRenderData();
   } catch (error) {
     console.error("Error fetching data or template:", error);
   }
@@ -98,7 +101,8 @@ async function fetchAndRenderData() {
       "https://jsonplaceholder.typicode.com/photos?_limit=8"
     );
     const data = await response.json();
-
+    renderBlogData3(data);
+    renderBlogData2(data);
     // Render catalogue content
     renderCatalogue(data);
     renderCatalogue2(data);
@@ -106,7 +110,6 @@ async function fetchAndRenderData() {
     renderRecommendationList(data);
     // Render blog data
     renderBlogData(data);
-    renderBlogData2(data);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
@@ -191,6 +194,20 @@ function renderBlogData2(data) {
   }
 }
 
+function renderBlogData3(data) {
+  const specificIndex = 2; // Change this to the desired index
+  if (specificIndex >= 0 && specificIndex + 1 < data.length) {
+    const specificData = data;
+    loadTemplate("./javascript/template/blog.hbs").then((templateSource) => {
+      const template = Handlebars.compile(templateSource);
+      const html = template(specificData);
+      document.getElementById("blog-data3").innerHTML = html;
+    });
+  } else {
+    console.error("Index out of bounds for blog data");
+  }
+}
+
 // Ensure the DOM is fully loaded before running the function
 document.addEventListener("DOMContentLoaded", async () => {
   renderTemplates();
@@ -200,6 +217,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const data = await response.json();
   renderCatalogueMenu(data);
   renderCatalogueMenuSM(data);
+
+  await fetchAndRenderData();
 });
 
 function renderCatalogueMenu(data) {
