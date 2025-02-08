@@ -312,6 +312,11 @@
           </svg>
           Try Our Product!
         </button>
+        <audio id="background-music" autoplay loop>
+          <source src="assets/chronicle_gayo.mp3" type="audio/mpeg" />
+
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </nav>
 
@@ -510,6 +515,151 @@
             </div>
 
             <div class="h-100" id="map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="catalogue-data" class="content-sm px-8 mx-auto max-w-screen">
+      <div
+        class="p-4 z-4 my-8 rounded-lg max-w-screen"
+        style="background-color: #f8f4f0"
+      >
+        <div class="flex flex-col items-center justify-center gap-4 mx-auto">
+          <div class="flex justify-between items-start">
+            <div class="flex flex-col justify-between items-center px-8 w-full">
+              <a class="navbar-brand mt-4" href="index.html"
+                ><img
+                  src="assets/logo_white.png"
+                  alt="chronicles coffee"
+                  style="width: auto; height: 4rem"
+              /></a>
+            </div>
+          </div>
+          <div
+            id="controls-carousel"
+            class="relative w-full"
+            data-carousel="static"
+          >
+            <!-- Carousel wrapper -->
+
+            <div
+              class="relative overflow-hidden rounded-lg"
+              style="height: 15rem"
+            >
+              <!-- Item 1 -->
+
+              <div class="duration-700 ease-in-out" data-carousel-item="active">
+                <img
+                  src="https://specialtycoffee.id/wp-content/uploads/2024/01/image-of-Indonesian-coffee-brewing.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                  style="height: 15rem"
+                  alt="..."
+                />
+              </div>
+
+              <!-- Item 2 -->
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbz9ytsqpSoNGBMupyXT6ye9Orlqc3jjNoZmjZuszt6fI_4P3LH1JEy1UhuKepzmUtquk&usqp=CAU"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                  style="height: 15rem"
+                  alt="..."
+                />
+              </div>
+
+              <!-- Item 3 -->
+
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkKYAAuKF9mwR9ntA4M7wOHKNfwcX8XVSngfDUu_uVwusxn9oTBrkm0N8b3khf46qVf6A&usqp=CAU"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover"
+                  style="height: 15rem"
+                  alt="..."
+                />
+              </div>
+            </div>
+
+            <!-- Slider controls -->
+
+            <button
+              type="button"
+              class="absolute top-30 left-2 z-30 flex items-center justify-center h-8 w-8 -translate-y-1/2 cursor-pointer group focus:outline-none"
+              data-carousel-prev
+            >
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/60 group-hover:bg-gray-50/90"
+              >
+                <svg
+                  class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 1 1 5l4 4"
+                  />
+                </svg>
+
+                <span class="sr-only">Previous</span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="absolute top-30 right-2 z-30 flex items-center justify-center h-8 w-8 -translate-y-1/2 cursor-pointer group focus:outline-none"
+              data-carousel-next
+            >
+              <span
+                class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/60 group-hover:bg-gray-50/90"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-800 rtl:rotate-180"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 6 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 9 4-4-4-4"
+                  />
+                </svg>
+
+                <span class="sr-only">Next</span>
+              </span>
+            </button>
+          </div>
+          <div
+            class="w-full max-w-full p-4 rounded-lg shadow-lg"
+            style="background-color: #fcfcfc"
+          >
+            <div class="flex flex-col items-center justify-center">
+              <h1
+                class="p-hero font-bold text-center"
+                style="font-size: 1.3rem; color: #2e2c2a; line-height: 110%"
+              >
+                WHERE TO FIND US
+              </h1>
+              <p
+                class="text-center w-60 mt-1 font-light mb-2"
+                style="font-size: 0.7rem; color: #2e2c2a"
+              >
+                From warm and smooth to cold and refreshing. There are endless
+                drink option to find and love at Coffee House..
+              </p>
+            </div>
+
+            <div class="h-100" id="map-2"></div>
           </div>
         </div>
       </div>
@@ -841,6 +991,26 @@
       const marker = L.marker([-6.4313695, 106.8928713]).addTo(map);
 
       marker
+        .bindPopup("<b>The Chronicles</b><br>This is our Headquarters.")
+        .openPopup();
+
+      // Initialize the map and set its view to Jakarta
+
+      const map2 = L.map("map-2").setView([-6.4313695, 106.8928713], 12); // Coordinates for Jakarta
+
+      // Add OpenStreetMap tile layer
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+
+        attribution: "© OpenStreetMap",
+      }).addTo(map2);
+
+      // Add a marker for Jakarta
+
+      const marker2 = L.marker([-6.4313695, 106.8928713]).addTo(map2);
+
+      marker2
         .bindPopup("<b>The Chronicles</b><br>This is our Headquarters.")
         .openPopup();
     </script>

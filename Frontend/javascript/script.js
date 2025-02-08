@@ -254,3 +254,17 @@ function renderCatalogueMenuSM(data) {
     console.error("Index out of bounds for catalogue");
   }
 }
+
+const audio = document.getElementById("background-music");
+
+const playButton = document.getElementById("play-button");
+
+// Set the default volume (between 0.0 and 1.0)
+
+audio.volume = 0.5; // Set volume to 50%
+
+playButton.addEventListener("click", () => {
+  audio.play();
+
+  playButton.style.display = "none"; // Hide the button after playing
+});

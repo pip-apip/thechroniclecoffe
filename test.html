@@ -1,0 +1,125 @@
+<div>
+  <div class="card">
+    <div class="widget-header border-b px-8 py-5 flex justify-between">
+      <div class="flex justify-between w-full">
+        <div>
+          <p class="fs-14 fw-600">TOP 50 COMPANY</p>
+          <p class="fs-12 fw-400 text-muted">by Number of Tender Won</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button aria-label="Refresh">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path d="..." fill="black"></path>
+          </svg>
+        </button>
+        <button aria-label="Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path d="..." fill="black"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Scrollable Container -->
+    <div
+      class="scrollable-container px-8 py-6"
+      style="max-height: 610px; overflow-y: auto"
+    >
+      {{#each data}}
+      <div class="col-11 mb-7">
+        <div class="flex justify-between items-center mb-3">
+          <p class="m-0 fs-16 fw-500 whitespace-normal break-words">
+            {{this.pembekal_berjaya}}
+          </p>
+          <p class="m-0 fs-16 fw-600">
+            {{thousandFormat this.number_of_tender}}
+          </p>
+        </div>
+        <div class="w-full bg-gray-200 div-rate">
+          <div
+            class="bg-color-rate div-rate"
+            style="width: calc({{this.number_of_tender}} / 92 * 100%);"
+          ></div>
+        </div>
+        <!-- See Relationship Button -->
+        {{#if @first}}
+        <a
+          class="col btn btn-outline-primary btn-sm mt-3"
+          style="max-width: 9rem"
+          href="https://app.ebdeskfusion.ai/v/1737703154921/app/kementerian-connection?pembekal_berjaya={{this.pembekal_berjaya}}&bidang={{this.bidang}}&year={{this.year}}"
+          role="button"
+          >See Relationship</a
+        >
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="card">
+    <div class="widget-header border-b px-8 py-5 flex justify-between">
+      <div class="flex items-center gap-3">
+        <button aria-label="Refresh">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path d="..." fill="black"></path>
+          </svg>
+        </button>
+        <button aria-label="Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path d="..." fill="black"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Scrollable Container -->
+    <div
+      class="scrollable-container px-8 py-6"
+      style="max-height: 610px; overflow-y: auto"
+    >
+      {{#each data}}
+      <div class="col-11 mb-7">
+        <div class="flex justify-between items-center mb-3">
+          <!-- Agency name wrapped -->
+          <p class="m-0 fs-16 fw-500 whitespace-normal break-words">
+            {{pembekal_berjaya}}
+          </p>
+          <p class="m-0 fs-16 fw-600">{{thousandFormat number_of_tender}}</p>
+        </div>
+        <!-- Progress Bar -->
+        <div class="w-full bg-gray-200 div-rate">
+          <div
+            class="bg-color-rate div-rate"
+            style="width: calc({{number_of_tender}} / 92 * 100%);"
+          ></div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
