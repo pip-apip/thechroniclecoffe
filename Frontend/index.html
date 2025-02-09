@@ -13,6 +13,12 @@
     />
     <link rel="stylesheet" href="./css/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.umd.min.js"></script>
+    <link
+      href="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.0.2/leaflet-maptilersdk.umd.min.js"></script>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
@@ -38,6 +44,9 @@
     ></script>
   </head>
   <body style="background-color: #e5dcd3" class="max-w-screen">
+    <!-- <div id="loader" class="loader">
+      <div class="spinner"></div>
+    </div> -->
     <nav class="border-gray-200 absolute top-0 z-3 w-screen px-8 content-sm">
       <div
         class="max-w-screen flex flex-wrap items-center justify-between mx-auto py-2 lg:px-32 sm:px-32"
@@ -320,9 +329,9 @@
       </div>
     </nav>
 
-    <div id="landing-chronicles"></div>
+    <div id="landing-chronicles" class="fade-in"></div>
     <div id="catalogue-chronicles"></div>
-    <div id="top-product-chronicles"></div>
+    <div id="top-product-chronicles" class="fade-in"></div>
     <div id="recommendation-list-chronicles"></div>
 
     <div
@@ -975,41 +984,37 @@
 
     <script>
       // Initialize the map and set its view to Jakarta
-
       const map = L.map("map").setView([-6.4313695, 106.8928713], 12); // Coordinates for Jakarta
 
-      // Add OpenStreetMap tile layer
-
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-
-        attribution: "© OpenStreetMap",
-      }).addTo(map);
+      // Add CartoDB Positron tile layer
+      L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+        {
+          maxZoom: 19,
+          attribution: "© OpenStreetMap, © CartoDB",
+        }
+      ).addTo(map);
 
       // Add a marker for Jakarta
-
       const marker = L.marker([-6.4313695, 106.8928713]).addTo(map);
-
       marker
         .bindPopup("<b>The Chronicles</b><br>This is our Headquarters.")
         .openPopup();
 
-      // Initialize the map and set its view to Jakarta
-
+      // Initialize the second map and set its view to Jakarta
       const map2 = L.map("map-2").setView([-6.4313695, 106.8928713], 12); // Coordinates for Jakarta
 
-      // Add OpenStreetMap tile layer
-
-      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-
-        attribution: "© OpenStreetMap",
-      }).addTo(map2);
+      // Add CartoDB Positron tile layer
+      L.tileLayer(
+        "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+        {
+          maxZoom: 19,
+          attribution: "© OpenStreetMap, © CartoDB",
+        }
+      ).addTo(map2);
 
       // Add a marker for Jakarta
-
       const marker2 = L.marker([-6.4313695, 106.8928713]).addTo(map2);
-
       marker2
         .bindPopup("<b>The Chronicles</b><br>This is our Headquarters.")
         .openPopup();

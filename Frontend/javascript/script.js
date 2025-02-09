@@ -1,10 +1,59 @@
 $(document).ready(function () {
   $("#navbar").load("javascript/template/navbar.html");
+  $("#footer").load("javascript/template/footer.html");
+
+  document.getElementById("loader").style.display = "flex";
+
+  // Hide the loader when the page is fully loaded
+  window.addEventListener("load", function () {
+    document.getElementById("loader").style.display = "none";
+  });
 });
 
-$(document).ready(function () {
-  $("#footer").load("javascript/template/footer.html");
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  const fadeInOnScroll = () => {
+    fadeElements.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+
+      const windowHeight = window.innerHeight;
+
+      // Check if the element is in the viewport
+
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        element.classList.add("visible");
+      }
+    });
+  };
+
+  // Initial check
+
+  fadeInOnScroll();
+
+  // Add scroll event listener
+
+  window.addEventListener("scroll", fadeInOnScroll);
 });
+
+function zoomImage(imageId) {
+  const img = document.getElementById(imageId);
+  const zoomedImg = document.createElement("img");
+  zoomedImg.src = img.src;
+  zoomedImg.style.width = "80%"; // Adjust size as needed
+  zoomedImg.style.height = "auto";
+  zoomedImg.style.position = "fixed";
+  zoomedImg.style.top = "50%";
+  zoomedImg.style.left = "50%";
+  zoomedImg.style.transform = "translate(-50%, -50%)";
+  zoomedImg.style.zIndex = "1000";
+  zoomedImg.style.cursor = "zoom-out";
+  zoomedImg.style.boxShadow = "0 0 10px rgba(0, 0, 0, 0.5)";
+  zoomedImg.onclick = function () {
+    document.body.removeChild(zoomedImg);
+  };
+  document.body.appendChild(zoomedImg);
+}
 
 var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
@@ -36,9 +85,8 @@ themeToggleBtn.addEventListener("click", function () {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
     }
-
-    // if NOT set via local storage previously
   } else {
+    // if NOT set via local storage previously
     if (document.documentElement.classList.contains("dark")) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
@@ -88,8 +136,6 @@ async function renderTemplates() {
     document.getElementById("footer-chronicles").innerHTML = footerTemplate([]);
 
     console.log("Templates rendered successfully");
-
-    // Call the function to fetch data after templates are rendered
   } catch (error) {
     console.error("Error fetching data or template:", error);
   }
@@ -103,12 +149,9 @@ async function fetchAndRenderData() {
     const data = await response.json();
     renderBlogData3(data);
     renderBlogData2(data);
-    // Render catalogue content
     renderCatalogue(data);
     renderCatalogue2(data);
-    // Render recommendation list
     renderRecommendationList(data);
-    // Render blog data
     renderBlogData(data);
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -123,7 +166,6 @@ function renderCatalogue(data) {
       (templateSource) => {
         const template = Handlebars.compile(templateSource);
         const html = template(specificData);
-        // console.log(html);
         document.getElementById("catalogue-content").innerHTML = html;
       }
     );
@@ -140,7 +182,6 @@ function renderCatalogue2(data) {
       (templateSource) => {
         const template = Handlebars.compile(templateSource);
         const html = template(specificData);
-        // console.log(html);
         document.getElementById("catalogue-content_2").innerHTML = html;
       }
     );
@@ -210,14 +251,20 @@ function renderBlogData3(data) {
 
 // Ensure the DOM is fully loaded before running the function
 document.addEventListener("DOMContentLoaded", async () => {
-  renderTemplates();
+  // Wait for templates to render first
+  await renderTemplates();
+
+  // Fetch data after templates are rendered
   const response = await fetch(
     "https://jsonplaceholder.typicode.com/photos?_limit=8"
   );
   const data = await response.json();
+
+  // Render catalogue menus
   renderCatalogueMenu(data);
   renderCatalogueMenuSM(data);
 
+  // Fetch and render additional data
   await fetchAndRenderData();
 });
 
@@ -229,7 +276,6 @@ function renderCatalogueMenu(data) {
       (templateSource) => {
         const template = Handlebars.compile(templateSource);
         const html = template(specificData);
-        // console.log(html);
         document.getElementById("catalogue-content_2").innerHTML = html;
       }
     );
@@ -246,7 +292,6 @@ function renderCatalogueMenuSM(data) {
       (templateSource) => {
         const template = Handlebars.compile(templateSource);
         const html = template(specificData);
-        // console.log(html);
         document.getElementById("catalogue-content").innerHTML = html;
       }
     );
@@ -256,15 +301,12 @@ function renderCatalogueMenuSM(data) {
 }
 
 const audio = document.getElementById("background-music");
-
 const playButton = document.getElementById("play-button");
 
 // Set the default volume (between 0.0 and 1.0)
-
 audio.volume = 0.5; // Set volume to 50%
 
 playButton.addEventListener("click", () => {
   audio.play();
-
   playButton.style.display = "none"; // Hide the button after playing
 });

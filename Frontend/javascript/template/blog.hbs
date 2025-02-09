@@ -1,31 +1,38 @@
 <section class="content-lg">
-  <div class="flex flex-wrap justify-between items-start mt-5 w-6xl px-8">
+  <div class="flex flex-wrap justify-between items-start mt-5 w-6xl px-12">
     {{#each this}}
-      <div
+      <a
+        href="article.html"
+        class="card-link mb-8"
         style="width: 21rem; height: 26rem;"
-        class="bg-stone-100 mb-3 pb-3 rounded-lg shadow-md flex flex-col justify-start"
       >
-        <img
-          src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2022/08/21/3401271-820752019.jpg?itok=e8c1hwwk"
-          class="w-auto h-60 rounded-t-lg mb-4"
-          alt="{{title}}"
-          style="object-fit: cover"
-        />
-        <div class="flex flex-col gap-2 justify-start items-start px-3">
-          <div class="flex justify-center items-center gap-1 mb-1">
-            <div
-              class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-2.5 py-1 me-2 hover:border-stone-600"
-            >Inspirational</div>
-            <div
-              class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-2.5 py-1 me-2 hover:border-stone-600"
-            >Bussiness</div>
+        <div
+          style="width: 21rem; height: 26rem;"
+          class="bg-stone-100 mb-3 pb-3 rounded-lg shadow-md flex flex-col justify-start transition-transform transform hover:scale-105"
+        >
+          <img
+            src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2022/08/21/3401271-820752019.jpg?itok=e8c1hwwk"
+            class="w-auto h-60 rounded-t-lg mb-4"
+            alt="{{title}}"
+            style="object-fit: cover"
+          />
+          <div class="flex flex-col gap-2 justify-start items-start px-3">
+            <div class="flex justify-center items-center gap-1 mb-1">
+              <div
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-2.5 py-1 me-2 hover:border-stone-600"
+              >Inspirational</div>
+              <div
+                class="text-stone-900 bg-white/20 border border-stone-700 focus:outline-none hover:bg-stone-100 focus:ring-4 focus:ring-stone-100 font-medium rounded-full text-xs px-2.5 py-1 me-2 hover:border-stone-600"
+              >Bussiness</div>
+            </div>
+            <h5 class="font-semibold text-sm">Indonesian coffee exporter eye
+              potential in Middle East markets.</h5>
+            <p class="text-light text-xs">12 Sep 2025, 12.30</p>
+            <p class="text-light text-xs"><strong>Author :
+              </strong>Chronicle</p>
           </div>
-          <h5 class="font-semibold text-sm">Indonesian coffee exporter eye
-            potential in Middle East markets.</h5>
-          <p class="text-light text-xs">12 Sep 2025, 12.30</p>
-          <p class="text-light text-xs"><strong>Author : </strong>Chronicle</p>
         </div>
-      </div>
+      </a>
     {{/each}}
   </div>
 </section>
