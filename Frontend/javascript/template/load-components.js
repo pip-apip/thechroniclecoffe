@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         header: loadTemplate("javascript/template/navbar.hbs"),
         headerCatalogue: loadTemplate("javascript/template/navbar-catalog.hbs"),
         landing: loadTemplate("javascript/template/landing-page.hbs"),
+        blogCatalogue: loadTemplate("javascript/template/article-catalog.hbs"),
         topProduct: loadTemplate("javascript/template/top-product.hbs"),
         catalogue: loadTemplate("javascript/template/catalogue.hbs"),
         recommendationList: loadTemplate(
@@ -49,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         headerTemplate,
         headerCatalogue,
         landing,
+        blogCatalogue,
         topProduct,
         catalogue,
         recommendationList,
@@ -66,6 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
         setInnerHTMLIfExists("header", headerTemplate);
         setInnerHTMLIfExists("header-catalog", headerCatalogue);
         setInnerHTMLIfExists("landing-page", landing);
+        setInnerHTMLIfExists("article-catalog", blogCatalogue, [
+          {
+            title: "My Awesome Website",
+            homeLink: "Home",
+            aboutLink: "About",
+            contactLink: "Contact",
+          },
+          // ... (other items)
+        ]);
         setInnerHTMLIfExists("top-product", topProduct);
         setInnerHTMLIfExists("catalogue", catalogue, [
           {
