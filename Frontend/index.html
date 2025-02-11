@@ -21,7 +21,12 @@
       crossorigin=""
     />
   </head>
-  <body style="background-color: #e5dcd3" class="max-w-screen">
+  <body class="relative" style="background-color: #e5dcd3">
+    <div
+      class="absolute inset-0 bg-[url('https://t4.ftcdn.net/jpg/02/97/06/79/360_F_297067925_KD5GbSJVw5VoQrsk1TMUWklBYQbYLNSV.jpg')] bg-blend-multiply opacity-10 -z-1"
+      style="background-size: 30%"
+    ></div>
+    <!-- Overlay -->
     <div id="loader" class="loader">
       <div class="spinner"></div>
     </div>
@@ -35,7 +40,6 @@
     <div id="footer"></div>
 
     <script src="./javascript/script.js"></script>
-
     <script src="javascript/template/load-components.js"></script>
   </body>
 </html>

@@ -9,24 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("loader").style.display = "none";
   });
 
-  // Load all necessary scripts first
+  // Load all necessary scripts first in the correct order
   Promise.all([
+    loadScript("https://code.jquery.com/jquery-3.7.1.min.js"), // Load jQuery first
     loadScript(
       "https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"
-    ),
-    loadScript("https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"),
-    loadScript("https://kit.fontawesome.com/dbf5af6bac.js"),
-    loadScript("https://code.jquery.com/jquery-3.7.1.min.js"),
+    ), // Load Handlebars
+    loadScript("javascript/template/function.js"), // Load custom functions
+    loadScript(
+      "https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
+    ), // Load Flowbite
+    loadScript("https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"), // Load Leaflet
+    loadScript("https://kit.fontawesome.com/dbf5af6bac.js"), // Load FontAwesome
   ])
     .then(() => {
-      // Load Flowbite before rendering templates
-      return loadScript(
-        "https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"
-      );
-    })
-    .then(() => {
-      // Initialize the maps after all scripts are loaded
-
       // Load and compile templates after initializing maps
       const templates = {
         header: loadTemplate("javascript/template/navbar.hbs"),
@@ -34,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         landing: loadTemplate("javascript/template/landing-page.hbs"),
         blogCatalogue: loadTemplate("javascript/template/article-catalog.hbs"),
         topProduct: loadTemplate("javascript/template/top-product.hbs"),
+        productList: loadTemplate("javascript/template/product-list.hbs"),
         catalogue: loadTemplate("javascript/template/catalogue.hbs"),
         recommendationList: loadTemplate(
           "javascript/template/recommendation-list.hbs"
@@ -52,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         landing,
         blogCatalogue,
         topProduct,
+        productList,
         catalogue,
         recommendationList,
         mapGallery,
@@ -78,9 +76,24 @@ document.addEventListener("DOMContentLoaded", function () {
           // ... (other items)
         ]);
         setInnerHTMLIfExists("top-product", topProduct);
+        setInnerHTMLIfExists("product-list", productList, [
+          {
+            title: "My Awesome Website",
+            homeLink: "Home",
+            aboutLink: "About",
+            contactLink: "Contact",
+          },
+          // ... (other items)
+        ]);
         setInnerHTMLIfExists("catalogue", catalogue, [
           {
             title: "My Awesome Website",
+            homeLink: "Home",
+            aboutLink: "About",
+            contactLink: "Contact",
+          },
+          {
+            title: "My Coffee Website",
             homeLink: "Home",
             aboutLink: "About",
             contactLink: "Contact",
@@ -160,4 +173,103 @@ function initializeMaps() {
   marker2
     .bindPopup("<b>The Chronicles</b><br>This is our Headquarters.")
     .openPopup();
+}
+
+function changeImage(newSrc) {
+  document.getElementById("large-image").src = newSrc;
+}
+
+function showModal(index, title, image, description, origin, price) {
+  // Create the modal content
+  const modalContent = `
+    <div id="helohelo-modal${index}" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 z-50 w-full h-full flex justify-center items-center bg-black bg-opacity-50 transition-opacity duration-300 opacity-0">
+      <div class="relative p-4 w-full max-w-2xl max-h-screen bg-white rounded-lg shadow-sm transform transition-transform duration-300 scale-95">
+        <!-- Modal header -->
+        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t border-gray-200">
+          <h3 class="text-xl font-semibold text-gray-900">${title}</h3>
+          <button
+            type="button"
+            class="close-modal text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+            onclick="closeModal(${index})"
+          >
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+            <span class="sr-only">Close modal</span>
+          </button>
+        </div>
+        <!-- Modal body -->
+        <div class="p-4 md:p-5">
+          <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+            <!-- Image on the left -->
+            <div class="w-full md:w-1/2">
+              <img
+                id="coffee-image1"
+                src=".\\assets\\Robusta-Gayo.png"
+                alt="${title}"
+                class="w-full h-64 object-contain rounded-lg cursor-pointer"
+                onclick="zoomImage('coffee-image1')"
+              />
+            </div>
+            <!-- Content on the right -->
+            <div class="w-full md:w-1/2 space-y-4">
+              <p class="text-base leading-relaxed text-gray-500">${description}</p>
+              <div class="flex items-center justify-between">
+                <p class="text-lg font-semibold text-gray-900">Origin: ${origin}</p>
+                <p class="text-lg font-semibold text-gray-900">${price}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b">
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+          >
+            Add to Cart
+          </button>
+          <button
+            onclick="closeModal(${index})"
+            type="button"
+            class="close-modal py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+
+  // Insert the modal into the body
+  document.body.insertAdjacentHTML("beforeend", modalContent);
+
+  // Trigger the transition by adding opacity and scale classes after a short delay
+  setTimeout(() => {
+    const modal = document.getElementById(`helohelo-modal${index}`);
+    modal.classList.remove("hidden");
+    modal.classList.remove("opacity-0");
+    modal.classList.add("opacity-100");
+    modal.querySelector(".scale-95").classList.remove("scale-95");
+    modal.querySelector(".scale-95").classList.add("scale-100");
+  }, 10);
+}
+
+function closeModal(index) {
+  const modal = document.getElementById(`helohelo-modal${index}`);
+  if (modal) {
+    modal.remove();
+  }
 }

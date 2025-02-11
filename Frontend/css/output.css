@@ -1197,6 +1197,9 @@
   .top-1\/2 {
     top: calc(1/2 * 100%);
   }
+  .top-1\/4 {
+    top: calc(1/4 * 100%);
+  }
   .top-10 {
     top: calc(var(--spacing) * 10);
   }
@@ -1242,17 +1245,26 @@
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
+  .left-1\/4 {
+    left: calc(1/4 * 100%);
+  }
   .left-2 {
     left: calc(var(--spacing) * 2);
   }
   .left-20 {
     left: calc(var(--spacing) * 20);
   }
+  .left-25 {
+    left: calc(var(--spacing) * 25);
+  }
   .isolate {
     isolation: isolate;
   }
   .isolation-auto {
     isolation: auto;
+  }
+  .-z-1 {
+    z-index: calc(1 * -1);
   }
   .-z-2 {
     z-index: calc(2 * -1);
@@ -1395,8 +1407,14 @@
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
+  }
   .m-5 {
     margin: calc(var(--spacing) * 5);
+  }
+  .m-32 {
+    margin: calc(var(--spacing) * 32);
   }
   .mx-auto {
     margin-inline: auto;
@@ -1418,6 +1436,9 @@
   }
   .ms-3 {
     margin-inline-start: calc(var(--spacing) * 3);
+  }
+  .ms-30 {
+    margin-inline-start: calc(var(--spacing) * 30);
   }
   .ms-auto {
     margin-inline-start: auto;
@@ -1919,6 +1940,12 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
+  .h-1\/6 {
+    height: calc(1/6 * 100%);
+  }
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
@@ -1928,8 +1955,14 @@
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
+  .h-4\/6 {
+    height: calc(4/6 * 100%);
+  }
   .h-5 {
     height: calc(var(--spacing) * 5);
+  }
+  .h-5\/6 {
+    height: calc(5/6 * 100%);
   }
   .h-6 {
     height: calc(var(--spacing) * 6);
@@ -1943,9 +1976,6 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
-  .h-21 {
-    height: calc(var(--spacing) * 21);
-  }
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
@@ -1957,6 +1987,9 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
+  }
+  .h-21 {
+    height: calc(var(--spacing) * 21);
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
@@ -2122,12 +2155,6 @@
   .w-5\/6 {
     width: calc(5/6 * 100%);
   }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
-  }
-  .w-25 {
-    width: calc(var(--spacing) * 25);
-  }
   .w-50 {
     width: calc(var(--spacing) * 50);
   }
@@ -2140,8 +2167,14 @@
   .w-6xl {
     width: var(--container-6xl);
   }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
+  }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
   }
   .w-80 {
     width: calc(var(--spacing) * 80);
@@ -2404,6 +2437,18 @@
   .translate-z-px {
     --tw-translate-z: 1px;
     translate: var(--tw-translate-x) var(--tw-translate-y) var(--tw-translate-z);
+  }
+  .scale-95 {
+    --tw-scale-x: 95%;
+    --tw-scale-y: 95%;
+    --tw-scale-z: 95%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-100 {
+    --tw-scale-x: 100%;
+    --tw-scale-y: 100%;
+    --tw-scale-z: 100%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .scale-3d {
     scale: var(--tw-scale-x) var(--tw-scale-y) var(--tw-scale-z);
@@ -3365,6 +3410,9 @@
   .bg-\[url\(\'https\:\/\/fnb\.coffee\/wp-content\/uploads\/2024\/12\/Handpicking-Sumatra-Coffee-Beans\.webp\'\)\] {
     background-image: url('https://fnb.coffee/wp-content/uploads/2024/12/Handpicking-Sumatra-Coffee-Beans.webp');
   }
+  .bg-\[url\(\'https\:\/\/t4\.ftcdn\.net\/jpg\/02\/97\/06\/79\/360_F_297067925_KD5GbSJVw5VoQrsk1TMUWklBYQbYLNSV\.jpg\'\)\] {
+    background-image: url('https://t4.ftcdn.net/jpg/02/97/06/79/360_F_297067925_KD5GbSJVw5VoQrsk1TMUWklBYQbYLNSV.jpg');
+  }
   .bg-none {
     background-image: none;
   }
@@ -4258,6 +4306,9 @@
   }
   .opacity-0 {
     opacity: 0%;
+  }
+  .opacity-10 {
+    opacity: 10%;
   }
   .opacity-100 {
     opacity: 100%;
